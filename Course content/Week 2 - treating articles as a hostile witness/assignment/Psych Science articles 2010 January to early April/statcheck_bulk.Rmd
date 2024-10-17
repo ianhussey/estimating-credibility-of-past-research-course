@@ -1,0 +1,149 @@
+---
+title: "Bulk application of statcheck to pdfs"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+
+# set knit options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+# Dependencies
+
+```{r}
+
+library(pdftools)
+library(dplyr)
+library(statcheck)
+library(janitor)
+library(purrr)
+library(stringr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(readr)
+
+```
+
+# Extract text
+
+```{r}
+
+# Get the list of PDF file names in the folder /pdfs
+pdf_files <- list.files(path = "pdfs", pattern = "\\.pdf$", full.names = TRUE)
+
+# Function to extract text from a single PDF
+extract_text_from_pdf <- function(pdf_file) {
+  text <- pdf_text(pdf_file)
+  # Combine all pages into one long string
+  full_text <- paste(text, collapse = " ")
+  return(full_text)
+}
+
+# Loop over all PDF files and extract text
+pdf_texts <- lapply(pdf_files, extract_text_from_pdf)
+
+# Create a data frame with the file names and the corresponding extracted text
+pdf_data <- data.frame(
+  file_name = basename(pdf_files),
+  text = unlist(pdf_texts),
+  stringsAsFactors = FALSE
+)
+
+```
+
+# statcheck
+
+```{r}
+
+possibly_statcheck <- possibly(statcheck, otherwise = NA)
+
+res <- pdf_data |>
+  mutate(results = map(text, possibly_statcheck, messages = FALSE, OneTailedTxt = TRUE)) |>
+  select(-text) |>
+  unnest(results) |>
+  mutate(for_p_curve = raw) |>
+  # tidy for pasting into p-curve.com
+  mutate(for_p_curve = str_replace_all(for_p_curve, "\\r?\\n", ""),
+         for_p_curve = str_replace(for_p_curve, "\\(z", "Z"),
+         for_p_curve = str_replace(for_p_curve, "\\(Z", "Z"),
+         #for_p_curve = str_replace(for_p_curve, ", p.*", ""),
+         #for_p_curve = str_replace(for_p_curve, ",p.*", ""),
+         for_p_curve = str_replace(for_p_curve, ",\\s?p.*", ""),
+         #for_p_curve = str_remove(for_p_curve, ", n.s."),
+         #for_p_curve = str_remove(for_p_curve, ",n.s."),
+         for_p_curve = str_replace(for_p_curve, ",\\s?n.s.*", ""),
+         for_p_curve = str_remove_all(for_p_curve, "–"),
+         for_p_curve = str_remove_all(for_p_curve, "−"),
+         for_p_curve = str_remove_all(for_p_curve, "-"),
+         for_p_curve = ifelse(str_detect(for_p_curve, "<"), "", for_p_curve),
+         for_p_curve = str_replace_all(for_p_curve, "χ2", "chi2"))
+
+# write to disk
+write_excel_csv(res, "statcheck_bulk_results.csv")
+
+# print tables
+
+res |> 
+  mutate(error = case_when(error == TRUE ~ TRUE,
+                           TRUE ~ FALSE)) |>
+  count(error, name = "n_tests") |>
+  mutate(percent = janitor::round_half_up(n_tests/sum(n_tests)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+res |> 
+  mutate(decision_error = case_when(decision_error == TRUE ~ TRUE,
+                           TRUE ~ FALSE)) |>
+  count(decision_error, name = "n_tests") |>
+  mutate(percent = janitor::round_half_up(n_tests/sum(n_tests)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+
+res |> 
+  group_by(file_name) |>
+  summarize(any_decision_error = any(decision_error == TRUE, na.rm = TRUE)) |>
+  ungroup() |>
+  count(any_decision_error, name = "n_articles") |>
+  mutate(percent = janitor::round_half_up(n_articles/sum(n_articles)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+res |> 
+  group_by(file_name) |>
+  summarize(any_error = any(error == TRUE, na.rm = TRUE)) |>
+  ungroup() |>
+  count(any_error, name = "n_articles") |>
+  mutate(percent = janitor::round_half_up(n_articles/sum(n_articles)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+```
+
+Note that percents are of checkable PDFs not all PDFs.
+
+# Session info
+
+```{r}
+
+sessionInfo()
+
+```
+
+
+

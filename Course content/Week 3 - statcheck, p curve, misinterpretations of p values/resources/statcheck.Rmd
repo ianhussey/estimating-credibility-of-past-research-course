@@ -1,0 +1,63 @@
+---
+title: "StatCheck"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+# Web apps for statcheck
+
+- [statcheck.io](https://statcheck.io): can handle PDF uploads but it doesn't always work + the output isn't as nicely formatted.
+- [Statcheck Simple Edition](https://statcheck.steveharoz.com/): text has to be pasted directly, but provides well formatted output.
+
+# R script implementation using the {statcheck} package
+
+```{r include=FALSE}
+
+# formatting options
+# set default chunk options
+knitr::opts_chunk$set(message = FALSE, 
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+```{r}
+
+library(tidyverse)
+library(statcheck)
+library(knitr)
+library(kableExtra)
+
+```
+
+# Statcheck
+
+```{r}
+
+# results to be statchecked
+results_for_statcheck <- 
+  tibble(reported_results = c("
+  t(58) = 1.46, p = .03
+  t(31) = 1.3, p = .20
+  t(61) = 2.89, p = .01
+  "))
+
+# apply statcheck
+statcheck(results_for_statcheck, messages = FALSE, OneTailedTxt = TRUE) |>
+  select(raw, reported_p, computed_p, error, decision_error, one_tailed_in_txt) |>
+  # print table
+  kable() |>
+  kable_classic(full_width = FALSE)
+
+```
+
+

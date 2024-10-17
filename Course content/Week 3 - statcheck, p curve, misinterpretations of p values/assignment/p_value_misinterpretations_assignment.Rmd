@@ -1,0 +1,109 @@
+---
+title: "Apply statcheck to assignments"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+
+# set knit options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+# Dependencies
+
+```{r}
+
+library(dplyr)
+library(readxl)
+library(statcheck)
+library(janitor)
+library(stringr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(readr)
+
+```
+
+# Summarize results
+
+```{r}
+
+dat <- read_xlsx("week 4 - misinterpretations of p-values results.xlsx") |>
+  janitor::clean_names() |>
+  rename(evidence_for_null_error = are_there_one_or_more_misinterpretations_of_p_values_of_the_following_type_in_this_article_misinterpretation_of_non_signficiant_p_values_as_evidence_for_the_null_hypothesis_ie_absence_of_evidence_does_not_equal_evidence_of_absence_errors_see_aczel_et_al_2018,
+         evidence_for_null_text = if_1_misinterpretations_found_paste_the_text_of_one_interpretation_here_4,
+         evidence_of_moderation_error = are_there_one_or_more_misinterpretations_of_p_values_of_the_following_type_in_this_article_the_difference_between_significant_and_non_significant_is_not_itself_significant_errors_see_gelman_stern_2006,
+         evidence_of_moderation_text = if_1_misinterpretations_found_paste_the_text_of_one_interpretation_here_6) |>
+  mutate(evidence_for_null_error = case_when(evidence_for_null_error == "No - no misinterpretations found" ~ FALSE,
+                                             evidence_for_null_error == "Yes - one or more misinterpretations" ~ TRUE,
+                                             TRUE ~ NA),
+         evidence_of_moderation_error = case_when(evidence_of_moderation_error == "No - no misinterpretations found" ~ FALSE,
+                                                  evidence_of_moderation_error == "Yes - one or more misinterpretations" ~ TRUE,
+                                                  TRUE ~ NA))
+
+dat |> 
+  count(evidence_for_null_error, name = "n_tests_evidence_for_null_error") |>
+  drop_na() |>
+  mutate(percent_error = janitor::round_half_up(n_tests_evidence_for_null_error/sum(n_tests_evidence_for_null_error)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+dat |> 
+  group_by(doi) |>
+  summarize(any_evidence_for_null_error = any(evidence_for_null_error == TRUE, na.rm = TRUE)) |>
+  ungroup() |>
+  count(any_evidence_for_null_error, name = "n_articles_evidence_for_null_error") |>
+  mutate(percent_error = janitor::round_half_up(n_articles_evidence_for_null_error/sum(n_articles_evidence_for_null_error)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+
+
+dat |> 
+  count(evidence_of_moderation_error, name = "n_tests_evidence_of_moderation_error") |>
+  drop_na() |>
+  mutate(percent_error = janitor::round_half_up(n_tests_evidence_of_moderation_error/sum(n_tests_evidence_of_moderation_error)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+dat |> 
+  group_by(doi) |>
+  summarize(any_evidence_of_moderation_error = any(evidence_of_moderation_error == TRUE, na.rm = TRUE)) |>
+  ungroup() |>
+  count(any_evidence_of_moderation_error, name = "n_articles_evidence_of_moderation_error") |>
+  mutate(percent_error = janitor::round_half_up(n_articles_evidence_of_moderation_error/sum(n_articles_evidence_of_moderation_error)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+```
+
+# Critique of this analysis
+
+What could go wrong here? Why might these results be wrong or incomplete?
+
+- Incomplete or erroneous extractions and categorizations. 
+
+# Session info
+
+```{r}
+
+sessionInfo()
+
+```
+
+
+

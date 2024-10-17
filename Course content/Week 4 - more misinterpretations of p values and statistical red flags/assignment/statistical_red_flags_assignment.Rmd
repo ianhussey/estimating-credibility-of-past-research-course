@@ -1,0 +1,99 @@
+---
+title: "Statistical red flags assignment"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+
+# set knit options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+# Dependencies
+
+```{r}
+
+library(dplyr)
+library(readxl)
+library(statcheck)
+library(janitor)
+library(stringr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(readr)
+
+```
+
+# Summarize results
+
+```{r}
+
+dat <- read_xlsx("week 5 - statistical red flags.xlsx", skip = 2) |>
+  janitor::clean_names() |>
+  mutate(across(everything(), ~ str_replace(., "To be scored", NA_character_))) |>
+  rename(mediation = mediatoin)
+
+
+custom_wrangle <- function(dat, var){
+  var_string <- deparse(substitute(var))
+  
+  dat |> 
+    count({{var}}) |>
+    drop_na() |>
+    mutate(percent_error = janitor::round_half_up(n/sum(n)*100, 1)) |>
+    pivot_wider(names_from = {{var}}, values_from = c("n", "percent_error")) |>
+    mutate(category = var_string) |>
+    janitor::clean_names()
+} 
+
+res <- 
+  bind_rows(custom_wrangle(dat, var = barely_sig_p_values),
+            custom_wrangle(dat, var = no_effect_sizes),
+            custom_wrangle(dat, var = subgroup_analyses),
+            custom_wrangle(dat, var = mediation),
+            custom_wrangle(dat, var = manova),
+            custom_wrangle(dat, var = multi_way_interactions),
+            custom_wrangle(dat, var = stepwise_regression),
+            custom_wrangle(dat, var = poor_covariate_selection),
+            custom_wrangle(dat, var = post_hoc_power),
+            custom_wrangle(dat, var = wrong_power),
+            custom_wrangle(dat, var = conditioning_on_post_treatment_variable))  |>
+  relocate(category, .before = "n_indeterminable")
+
+res |>
+  select(category, starts_with("percent")) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+ 
+```
+
+# Critique of this analysis
+
+What could go wrong here? Why might these results be wrong or incomplete?
+
+- Incomplete or erroneous extractions and categorizations. 
+
+# Session info
+
+```{r}
+
+sessionInfo()
+
+```
+
+
+

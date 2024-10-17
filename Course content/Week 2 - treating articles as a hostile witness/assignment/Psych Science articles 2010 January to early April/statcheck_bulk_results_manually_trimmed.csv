@@ -1,0 +1,408 @@
+﻿file_name,source,test_type,df1,df2,test_comp,test_value,p_comp,reported_p,computed_p,raw,error,decision_error,one_tailed_in_txt,apa_factor,for_p_curve
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,Chi2,1,NA,=,0.19,=,0.66,0.6629166175161066,"c2(1, N = 28) = 0.19, p = .66",FALSE,FALSE,FALSE,0.47,
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,Chi2,1,NA,=,4.23,=,0.04,0.039715440595756754,"c2(1, N = 32) = 4.23, p = .040",FALSE,FALSE,FALSE,0.47,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,11.06,<,0.001,8.821014346349601e-4,"χ2(1, N = 119) = 11.06, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,13.82,<,0.001,2.011832403307659e-4,"χ2(1, N = 166) = 13.82, p < .001",FALSE,FALSE,FALSE,0.82,
+Stirrat and Perrett - 2010 - Valid Facial Cues to Cooperation and Trust Male F.pdf,01,Chi2,1,NA,=,7.11,<,0.005,0.007665511,"χ2(1, N = 285) = 7.11, p < .005",TRUE,FALSE,TRUE,0.05,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,24.07,<,0.001,9.289635197690886e-7,"χ2(1, N = 411) = 24.07, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,29.71,<,0.001,5.017532107015572e-8,"χ2(1, N = 411) = 29.71, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,29.93,<,0.001,4.4792839422576136e-8,"χ2(1, N = 416) = 29.93, p < .001",FALSE,FALSE,FALSE,0.82,
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,Chi2,1,NA,=,16.1,<,0.01,6.008403613556877e-5,"χ2(1, N = 42) = 16.10, p < .01",FALSE,FALSE,FALSE,0.67,
+Lee et al. - 2010 - Sneezing in Times of a Flu Pandemic Public Sneezi.pdf,01,Chi2,1,NA,=,5.25,<,0.05,0.021946771,"χ2(1, N = 47) = 5.25, p < .05",FALSE,FALSE,FALSE,0.67,
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,Chi2,1,NA,=,3.19,=,0.07,0.074090012,"χ2(1, N = 53) = 3.19, p = .07",FALSE,FALSE,FALSE,0.67,
+Lee et al. - 2010 - Sneezing in Times of a Flu Pandemic Public Sneezi.pdf,01,Chi2,1,NA,=,0.83,>,0.3,0.3622725290045518,"χ2(1, N = 67) = 0.83, p > .3",FALSE,FALSE,FALSE,0.67,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,25.81,<,0.001,3.767315460798736e-7,"χ2(1, N = 68) = 25.81, p < .001",FALSE,FALSE,FALSE,0.82,
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,Chi2,1,NA,=,0.5,ns,NA,0.4795001221869535,"χ2(1, N = 71) = 0.50, n.s.",FALSE,FALSE,FALSE,0.67,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,1,NA,=,16.48,<,0.001,4.916598398717597e-5,"χ2(1, N = 71) = 16.48, p < .001",FALSE,FALSE,FALSE,0.82,
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,Chi2,1,NA,=,45.46,<,0.01,1.5578810622630283e-11,"χ2(1, N = 74) = 45.46, p < .01",FALSE,FALSE,FALSE,0.67,
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,Chi2,1,NA,=,10.24,<,0.01,0.001374276,"χ2(1, N = 90) = 10.24, p < .01",FALSE,FALSE,FALSE,0.67,
+Liljenquist et al. - 2010 - The Smell of Virtue Clean Scents Promote Reciproc.pdf,01,Chi2,1,NA,=,4.78,=,0.03,0.028792121,"χ2(1, N = 99) = 4.78, p = .03",FALSE,FALSE,FALSE,0.67,
+Herrmann et al. - 2010 - The Structure of Individual Differences in the Cog.pdf,01,Chi2,14,NA,=,16.93,=,0.26,0.2599273828097339,"χ2(14) = 16.93, p = .26",FALSE,FALSE,FALSE,1,
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,Chi2,2,NA,=,1.42,=,0.49,0.4916441974609652,"χ2(2, N = 142) = 1.42, p = .49",FALSE,FALSE,FALSE,0.73,
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,Chi2,2,NA,=,23.01,<,0.01,1.0079569546027456e-5,"χ2(2, N = 96) = 23.01, p < .01",FALSE,FALSE,FALSE,0.73,
+Krizan et al. - 2010 - Wishful Thinking in the 2008 U.S. Presidential Ele.pdf,01,Chi2,22,NA,=,37.25,=,0.022,0.022203823,"χ2(22, N = 151) = 37.25, p = .022",FALSE,FALSE,TRUE,0.3,
+Krizan et al. - 2010 - Wishful Thinking in the 2008 U.S. Presidential Ele.pdf,01,Chi2,25,NA,=,42.5,=,0.016,0.015870902111874016,"χ2(25, N = 151) = 42.50, p = .016",FALSE,FALSE,TRUE,0.3,
+Krizan et al. - 2010 - Wishful Thinking in the 2008 U.S. Presidential Ele.pdf,01,Chi2,3,NA,=,5.25,=,0.15,0.1543799176701713,"χ2(3, N = 151) = 5.25, p = .15",FALSE,FALSE,TRUE,0.3,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,16.29,<,0.001,9.888344037663605e-4,"χ2(3, N = 312) = 16.29, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,16.29,<,0.001,9.888344037663605e-4,"χ2(3, N = 312) = 16.29, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,10.67,<,0.01,0.013650941209213714,"χ2(3, N = 411) = 10.67, p < .01",TRUE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,45.03,<,0.001,9.117858365959911e-10,"χ2(3, N = 411) = 45.03, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,8.03,<,0.05,0.045395747916664266,"χ2(3, N = 411) = 8.03, p < .05",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,45.03,<,0.001,9.117858365959911e-10,"χ2(3, N = 416) = 45.03, p < .001",FALSE,FALSE,FALSE,0.82,
+Levy and Kelly - 2010 - Sex Differences in Jealousy A Contribution From A.pdf,01,Chi2,3,NA,=,27.84,<,0.001,3.924010539427795e-6,"χ2(3, N = 99) = 27.84, p < .001",FALSE,FALSE,FALSE,0.82,
+Herrmann et al. - 2010 - The Structure of Individual Differences in the Cog.pdf,01,Chi2,44,NA,=,72.31,=,0.005,0.004553385,"χ2(44) = 72.31, p = .005",FALSE,FALSE,FALSE,1,chi2(44) = 72.31
+Herrmann et al. - 2010 - The Structure of Individual Differences in the Cog.pdf,01,Chi2,54,NA,=,52.68,=,0.53,0.5254072640727584,"χ2(54) = 52.68, p = .53",FALSE,FALSE,FALSE,1,chi2(54) = 52.68
+Herrmann et al. - 2010 - The Structure of Individual Differences in the Cog.pdf,01,Chi2,54,NA,=,52.68,=,0.53,0.5254072640727584,"χ2(54) = 52.68, p = .53",FALSE,FALSE,FALSE,1,chi2(54) = 52.68
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,Chi2,6,NA,=,9.08,=,0.17,0.16912866556581357,"χ2(6, N = 383) = 9.08, p = .17",FALSE,FALSE,FALSE,0.32,chi2(6) = 9.08
+Southgate et al. - 2010 - Motor System Activation Reveals Infants’ On-Line P.pdf,01,F,1,10,=,15.94,=,0.003,0.002549021,"F(1, 10) = 15.94, p = .003",FALSE,FALSE,FALSE,0.5,"F(1, 10) = 15.94"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,106,=,8.58,=,0.004,0.00416177,"F(1, 106) = 8.58, p = .004",FALSE,FALSE,FALSE,0.47,"F(1, 106) = 8.58"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,2.93,=,0.09,0.089715286,"F(1, 112) = 2.93, p = .09",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 2.93"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,5.1,=,0.03,0.025862914,"F(1, 112) = 5.10, p = .03",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 5.10"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,5.22,=,0.02,0.024212189071391655,"F(1, 112) = 5.22, p = .02",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 5.22"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,5.26,=,0.02,0.023686921795601577,"F(1, 112) = 5.26, p = .02",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 5.26"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,8.66,<,0.01,0.003954502,"F(1, 112) = 8.66, p < .01",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 8.66"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,112,=,8.66,<,0.01,0.003954502,"F(1, 112) = 8.66, p < .01",FALSE,FALSE,FALSE,0.65,"F(1, 112) = 8.66"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,118,=,1.41,=,0.24,0.23744121099611695,"F(1, 118) = 1.41, p = .24",FALSE,FALSE,FALSE,0.65,"F(1, 118) = 1.41"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,118,=,17.88,<,1e-4,4.667072719065485e-5,"F(1, 118) = 17.88, p < .0001",FALSE,FALSE,FALSE,0.65,"F(1, 118) = 17.88"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,118,=,5.27,=,0.02,0.023461753783826256,"F(1, 118) = 5.27, p = .02",FALSE,FALSE,FALSE,0.65,"F(1, 118) = 5.27"
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,F,1,119,=,3.54,=,0.06,0.062348779551888785,"F(1, 119) = 3.54, p = .06",FALSE,FALSE,FALSE,0.47,"F(1, 119) = 3.54"
+Savani et al. - 2010 - What Counts as a Choice U.S. Americans Are More .pdf,01,F,1,120,=,11.56,=,0.01,9.155458811668848e-4,"F(1, 120) = 11.56, p = .01",TRUE,FALSE,FALSE,0.05,"F(1, 120) = 11.56"
+Savani et al. - 2010 - What Counts as a Choice U.S. Americans Are More .pdf,01,F,1,120,=,5.69,<,0.02,0.018627069366155033,"F(1, 120) = 5.69, p < .02",FALSE,FALSE,FALSE,0.05,"F(1, 120) = 5.69"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,122,=,8.28,<,0.01,0.004733518,"F(1, 122) = 8.28, p < .01",FALSE,FALSE,FALSE,0.65,"F(1, 122) = 8.28"
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,F,1,13,=,1.65,>,0.2,0.22137729714563403,"F(1, 13) = 1.65, p > .2",FALSE,FALSE,FALSE,0.44,"F(1, 13) = 1.65"
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,F,1,13,=,1.66,>,0.2,0.22006246102854007,"F(1, 13) = 1.66, p > .2",FALSE,FALSE,FALSE,0.44,"F(1, 13) = 1.66"
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,F,1,13,=,4.34,<,0.06,0.057531832,"F(1, 13) = 4.34, p < .06",FALSE,FALSE,FALSE,0.44,"F(1, 13) = 4.34"
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,F,1,13,=,5.09,<,0.05,0.041932121,"F(1, 13) = 5.09, p < .05",FALSE,FALSE,FALSE,0.44,"F(1, 13) = 5.09"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,0.01,ns,NA,0.9216686200707611,"F(1, 15) = 0.01, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 0.01"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,0.16,ns,NA,0.6947949357764698,"F(1, 15) = 0.16, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 0.16"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,1.03,ns,NA,0.32625016347924196,"F(1, 15) = 1.03, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 1.03"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,198.82,<,0.001,4.6330676974644144e-10,"F(1, 15) = 198.82, p < .001",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 198.82"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,4.52,=,0.05,0.050514729,"F(1, 15) = 4.52, p = .05",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 4.52"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,15,=,61.03,<,0.001,1.1523604057407191e-6,"F(1, 15) = 61.03, p < .001",FALSE,FALSE,TRUE,0.67,"F(1, 15) = 61.03"
+Walker et al. - 2010 - Preverbal Infants’ Sensitivity to Synaesthetic Cro.pdf,01,F,1,15,=,7.57,=,0.015,0.014845441216582692,"F(1, 15) = 7.57, p = .015",FALSE,FALSE,FALSE,0.22,"F(1, 15) = 7.57"
+Walker et al. - 2010 - Preverbal Infants’ Sensitivity to Synaesthetic Cro.pdf,01,F,1,15,=,9.22,=,0.008,0.00833058,"F(1, 15) = 9.22, p = .008",FALSE,FALSE,FALSE,0.22,"F(1, 15) = 9.22"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,151,=,4.99,=,0.03,0.026963652,"F(1, 151) = 4.99, p = .03",FALSE,FALSE,FALSE,0.88,"F(1, 151) = 4.99"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,151,=,5.76,=,0.02,0.0176131,"F(1, 151) = 5.76, p = .02",FALSE,FALSE,FALSE,0.88,"F(1, 151) = 5.76"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,151,=,5.84,=,0.02,0.016858782,"F(1, 151) = 5.84, p = .02",FALSE,FALSE,FALSE,0.88,"F(1, 151) = 5.84"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,151,=,6.41,=,0.01,0.012370364939053169,"F(1, 151) = 6.41, p = .01",FALSE,FALSE,FALSE,0.88,"F(1, 151) = 6.41"
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,F,1,152,=,0.06,=,0.806,0.8068263197824459,"F(1, 152) = 0.06, p = .806",FALSE,FALSE,FALSE,0.45,"F(1, 152) = 0.06"
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,F,1,152,=,0.27,=,0.603,0.6040876293848431,"F(1, 152) = 0.27, p = .603",FALSE,FALSE,FALSE,0.45,"F(1, 152) = 0.27"
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,F,1,152,=,1.69,=,0.195,0.1955688605243388,"F(1, 152) = 1.69, p = .195",FALSE,FALSE,FALSE,0.45,"F(1, 152) = 1.69"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,157,=,2.6,=,0.11,0.10887207450385912,"F(1, 157) = 2.6, p = .11",FALSE,FALSE,FALSE,0.65,"F(1, 157) = 2.6"
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,F,1,16,=,63.58,<,1e-4,5.78727526647539e-7,"F(1, 16) = 63.58, p < .0001",FALSE,FALSE,FALSE,0.9,"F(1, 16) = 63.58"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,170,=,3.95,<,0.05,0.048477256,"F(1, 170) = 3.95, p < .05",FALSE,FALSE,FALSE,0.88,"F(1, 170) = 3.95"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,170,=,6.34,=,0.01,0.012728835372887376,"F(1, 170) = 6.34, p = .01",FALSE,FALSE,FALSE,0.88,"F(1, 170) = 6.34"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,173,=,4.21,=,0.042,0.041693332,"F(1, 173) = 4.21, p = .042",FALSE,FALSE,FALSE,0.47,"F(1, 173) = 4.21"
+Miles et al. - 2010 - Moving Through Time.pdf,01,F,1,18,=,5.7,<,0.05,0.028140925128336432,"F(1, 18) = 5.70, p < .05",FALSE,FALSE,FALSE,0.38,"F(1, 18) = 5.70"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,19,=,11.44,<,0.01,0.0031271,"F(1, 19) = 11.44, p < .01",FALSE,FALSE,FALSE,0.45,"F(1, 19) = 11.44"
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,F,1,195,=,16.29,<,0.01,7.802930898504337e-5,"F(1, 195) = 16.29, p < .01",FALSE,FALSE,FALSE,0.67,"F(1, 195) = 16.29"
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,F,1,26,=,37.87,<,1e-4,1.6575612855033759e-6,"F(1, 26) = 37.87, p < .0001",FALSE,FALSE,FALSE,0.9,"F(1, 26) = 37.87"
+DeVoe and Iyengar - 2010 - Medium of Exchange Matters What’s Fair for Goods .pdf,01,F,1,260,=,0.57,=,0.45,0.4509422513683914,"F(1, 260) = 0.57, p = .45",FALSE,FALSE,FALSE,0.83,"F(1, 260) = 0.57"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,263,=,12.1,<,0.001,5.899187717926193e-4,"F(1, 263) = 12.1, p < .001",FALSE,FALSE,FALSE,0.82,"F(1, 263) = 12.1"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,263,=,16.5,<,1e-4,6.42573848348181e-5,"F(1, 263) = 16.5, p < .0001",FALSE,FALSE,FALSE,0.82,"F(1, 263) = 16.5"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,263,=,9.1,<,0.01,0.002806529,"F(1, 263) = 9.1, p < .01",FALSE,FALSE,FALSE,0.82,"F(1, 263) = 9.1"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,265,=,5.83,=,0.02,0.016432958,"F(1, 265) = 5.83, p = .02",FALSE,FALSE,FALSE,0.65,"F(1, 265) = 5.83"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,265,=,80.95,<,1e-4,4.5808404457231375e-17,"F(1, 265) = 80.95, p < .0001",FALSE,FALSE,FALSE,0.65,"F(1, 265) = 80.95"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,277,=,0.34,=,0.56,0.5603036287403829,"F(1, 277) = 0.34, p = .56",FALSE,FALSE,FALSE,0.88,"F(1, 277) = 0.34"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,277,=,4.41,=,0.04,0.036633206,"F(1, 277) = 4.41, p = .04",FALSE,FALSE,FALSE,0.88,"F(1, 277) = 4.41"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,277,=,8.44,<,0.01,0.003966654,"F(1, 277) = 8.44, p < .01",FALSE,FALSE,FALSE,0.88,"F(1, 277) = 8.44"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,0.03,ns,NA,0.8637362834613385,"F(1, 28) = 0.03, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 0.03"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,0.17,ns,NA,0.6832516406666505,"F(1, 28) = 0.17, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 0.17"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,2.05,ns,NA,0.1632751581877727,"F(1, 28) = 2.05, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 2.05"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,3.34,ns,NA,0.078290588,"F(1, 28) = 3.34, n.s.",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 3.34"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,5.04,=,0.033,0.032850780038227785,"F(1, 28) = 5.04, p = .033",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 5.04"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,28,=,70.91,<,0.001,3.698697250023841e-9,"F(1, 28) = 70.91, p < .001",FALSE,FALSE,TRUE,0.67,"F(1, 28) = 70.91"
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,F,1,30,=,0.35,=,0.11,0.5585452872567898,"F(1, 30) =
+0.35, p = .11",TRUE,FALSE,TRUE,0.16,"F(1, 30) =0.35"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,33,=,0.02,=,0.89,0.8883969011124023,"F(1, 33) = 0.02, p = .89",FALSE,FALSE,FALSE,0.31,"F(1, 33) = 0.02"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,33,=,10.81,=,0.002,0.002402433,"F(1, 33) = 10.81, p = .002",FALSE,FALSE,FALSE,0.31,"F(1, 33) = 10.81"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,33,=,12.12,=,0.001,0.001426004,"F(1, 33) = 12.12, p = .001",FALSE,FALSE,FALSE,0.31,"F(1, 33) = 12.12"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,33,=,22.26,<,0.001,4.223688680593066e-5,"F(1, 33) = 22.26, p < .001",FALSE,FALSE,FALSE,0.31,"F(1, 33) = 22.26"
+"Kay et al. - 2010 - Randomness, Attributions of Arousal, and Belief in.pdf",01,F,1,33,=,5.54,<,0.03,0.024693615804475506,"F(1, 33) = 5.54, p < .03",FALSE,FALSE,FALSE,0.5,"F(1, 33) = 5.54"
+"Kay et al. - 2010 - Randomness, Attributions of Arousal, and Belief in.pdf",01,F,1,33,=,5.97,<,0.03,0.020067207324610266,"F(1, 33) = 5.97, p < .03",FALSE,FALSE,FALSE,0.5,"F(1, 33) = 5.97"
+Coppin et al. - 2010 - I’m No Longer Torn After Choice How Explicit Choi.pdf,01,F,1,36,=,0.23,>,0.6,0.6344246666209574,"F(1, 36) = 0.23, p > .6",FALSE,FALSE,FALSE,0.83,"F(1, 36) = 0.23"
+Deater-Deckard et al. - 2010 - Maternal Working Memory and Reactive Negativity in.pdf,01,F,1,36,=,0.34,>,0.5,0.5634644028611264,"F(1, 36) = 0.34, p > .5",FALSE,FALSE,TRUE,0.45,"F(1, 36) = 0.34"
+Coppin et al. - 2010 - I’m No Longer Torn After Choice How Explicit Choi.pdf,01,F,1,36,=,17.1,<,0.001,2.027951213554071e-4,"F(1, 36) = 17.10, p < .001",FALSE,FALSE,FALSE,0.83,"F(1, 36) = 17.10"
+Coppin et al. - 2010 - I’m No Longer Torn After Choice How Explicit Choi.pdf,01,F,1,36,=,2.17,>,0.1,0.14941661172922463,"F(1, 36) = 2.17, p > .1",FALSE,FALSE,FALSE,0.83,"F(1, 36) = 2.17"
+Coppin et al. - 2010 - I’m No Longer Torn After Choice How Explicit Choi.pdf,01,F,1,36,=,8.75,<,0.01,0.005441432,"F(1, 36) = 8.75, p < .01",FALSE,FALSE,FALSE,0.83,"F(1, 36) = 8.75"
+Coppin et al. - 2010 - I’m No Longer Torn After Choice How Explicit Choi.pdf,01,F,1,36,=,90.3,<,0.001,2.3843328198746127e-11,"F(1, 36) = 90.3, p < .001",FALSE,FALSE,FALSE,0.83,"F(1, 36) = 90.3"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,38,=,12.67,<,0.01,0.001017774,"F(1, 38) = 12.67, p < .01",FALSE,FALSE,FALSE,0.45,"F(1, 38) = 12.67"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,38,=,4.58,<,0.05,0.038828338284277925,"F(1, 38) = 4.58, p < .05",FALSE,FALSE,FALSE,0.45,"F(1, 38) = 4.58"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,38,=,9.51,<,0.01,0.003796652,"F(1, 38) = 9.51, p < .01",FALSE,FALSE,FALSE,0.45,"F(1, 38) = 9.51"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,38,=,9.7,<,0.01,0.003496556,"F(1, 38) = 9.70, p < .01",FALSE,FALSE,FALSE,0.45,"F(1, 38) = 9.70"
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,F,1,380,=,379.62,<,0.001,4.044125226999376e-59,"F(1, 380) = 379.62, p < .001",FALSE,FALSE,FALSE,0.32,"F(1, 380) = 379.62"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,1,40,=,13.76,<,0.001,6.308200082437099e-4,"F(1, 40) = 13.76, p < .001",FALSE,FALSE,TRUE,0.67,"F(1, 40) = 13.76"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,40,=,6.04,=,0.02,0.018415366,"F(1, 40) = 6.04, p = .02",FALSE,FALSE,FALSE,0.88,"F(1, 40) = 6.04"
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,F,1,40,=,6.62,=,0.01,0.013899264316576336,"F(1, 40) = 6.62, p = .01",FALSE,FALSE,FALSE,0.88,"F(1, 40) = 6.62"
+DeVoe and Iyengar - 2010 - Medium of Exchange Matters What’s Fair for Goods .pdf,01,F,1,405,=,8.95,=,0.003,0.002944346,"F(1, 405) = 8.95, p = .003",FALSE,FALSE,FALSE,0.83,"F(1, 405) = 8.95"
+Sayette et al. - 2010 - Out for a Smoke The Impact of Cigarette Craving o.pdf,01,F,1,41,=,8.51,<,0.006,0.00570731,"F(1, 41) = 8.51, p < .006",FALSE,FALSE,TRUE,0.33,"F(1, 41) = 8.51"
+Sayette et al. - 2010 - Out for a Smoke The Impact of Cigarette Craving o.pdf,01,F,1,41,=,9.62,<,0.004,0.003476405,"F(1, 41) = 9.62, p < .004",FALSE,FALSE,TRUE,0.33,"F(1, 41) = 9.62"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,1,42,=,4.14,=,0.048,0.048226007,"F(1, 42) = 4.14, p = .048",FALSE,FALSE,FALSE,0.85,"F(1, 42) = 4.14"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,1,45,=,12.83,=,8e-4,8.331301420298343e-4,"F(1, 45) = 12.83, p = .0008",FALSE,FALSE,FALSE,0.67,"F(1, 45) = 12.83"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,46,=,10.75,<,0.01,0.001990732,"F(1, 46) = 10.75, p < .01",FALSE,FALSE,FALSE,0.45,"F(1, 46) = 10.75"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,1,46,=,187.23,<,1e-4,7.908565466254897e-18,"F(1, 46) = 187.23, p < .0001",FALSE,FALSE,FALSE,0.67,"F(1, 46) = 187.23"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,1,46,=,2.09,=,0.16,0.15504510056166487,"F(1, 46) = 2.09, p = .16",FALSE,FALSE,FALSE,0.45,"F(1, 46) = 2.09"
+Lee et al. - 2010 - Sneezing in Times of a Flu Pandemic Public Sneezi.pdf,01,F,1,48,=,10.06,=,0.003,0.002641189,"F(1, 48) = 10.06, p = .003",FALSE,FALSE,FALSE,0.67,"F(1, 48) = 10.06"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,1,51,=,0.36,ns,NA,0.5511630012343767,"F(1, 51) = 0.36, n.s.",FALSE,FALSE,FALSE,0.85,"F(1, 51) = 0.36"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,1,51,=,4.06,=,0.049,0.049196774214458616,"F(1, 51) = 4.06, p = .049",FALSE,FALSE,FALSE,0.85,"F(1, 51) = 4.06"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,1,51,=,5.71,=,0.021,0.020603293,"F(1, 51) = 5.71, p = .021",FALSE,FALSE,FALSE,0.85,"F(1, 51) = 5.71"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,1,53,=,7.86,<,0.01,0.007046617,"F(1, 53) = 7.86, p < .01",FALSE,FALSE,FALSE,0.5,"F(1, 53) = 7.86"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,56,=,119.35,<,0.001,1.6823046854625301e-15,"F(1, 56) = 119.35, p < .001",FALSE,FALSE,FALSE,0.47,"F(1, 56) = 119.35"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,56,=,2.74,=,0.1,0.1034590584685751,"F(1, 56) = 2.74, p = .10",FALSE,FALSE,FALSE,0.65,"F(1, 56) = 2.74"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,56,=,4.1,=,0.048,0.047661143,"F(1, 56) = 4.10, p = .048",FALSE,FALSE,FALSE,0.47,"F(1, 56) = 4.10"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,1,56,=,4.91,=,0.03,0.030783093,"F(1, 56) = 4.91, p = .03",FALSE,FALSE,FALSE,0.65,"F(1, 56) = 4.91"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,56,=,7.67,=,0.008,0.007601407,"F(1, 56) = 7.67, p = .008",FALSE,FALSE,FALSE,0.47,"F(1, 56) = 7.67"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,57,=,0.073,>,0.05,0.787993698,"F(1, 57) = 0.073, p > .05",FALSE,FALSE,FALSE,0.36,"F(1, 57) = 0.073"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,57,=,1.07,>,0.05,0.3053142702900903,"F(1, 57) = 1.07, p > .05",FALSE,FALSE,FALSE,0.36,"F(1, 57) = 1.07"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,57,=,12.59,=,0.001,7.844018139598422e-4,"F(1, 57) = 12.59, p = .001",FALSE,FALSE,FALSE,0.36,"F(1, 57) = 12.59"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,57,=,7.36,=,0.009,0.008803304,"F(1, 57) = 7.36, p = .009",FALSE,FALSE,FALSE,0.36,"F(1, 57) = 7.36"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,58,=,10.6,<,0.01,0.001890544,"F(1, 58) = 10.6, p < .01",FALSE,FALSE,FALSE,0.82,"F(1, 58) = 10.6"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,58,=,12.17,=,0.001,9.338152029777864e-4,"F(1, 58) = 12.17, p = .001",FALSE,FALSE,FALSE,0.36,"F(1, 58) = 12.17"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,58,=,22.4,<,1e-4,1.4646767062881056e-5,"F(1, 58) = 22.4, p < .0001",FALSE,FALSE,FALSE,0.82,"F(1, 58) = 22.4"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,58,=,24.3,<,1e-4,7.247701360932565e-6,"F(1, 58) = 24.3, p < .0001",FALSE,FALSE,FALSE,0.82,"F(1, 58) = 24.3"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,58,=,42.29,<,0.001,1.992382861990418e-8,"F(1, 58) = 42.29, p < .001",FALSE,FALSE,FALSE,0.36,"F(1, 58) = 42.29"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,58,=,42.29,<,0.001,1.992382861990418e-8,"F(1, 58) = 42.29, p < .001",FALSE,FALSE,FALSE,0.36,"F(1, 58) = 42.29"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,58,=,9.55,=,0.003,0.003069416,"F(1, 58) = 9.55, p = .003",FALSE,FALSE,FALSE,0.36,"F(1, 58) = 9.55"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,59,=,2.28,=,0.14,0.13638919815839168,"F(1, 59) = 2.28, p = .14",FALSE,FALSE,FALSE,0.47,"F(1, 59) = 2.28"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,59,=,231.48,<,0.001,4.369018866776253e-22,"F(1, 59) = 231.48, p < .001",FALSE,FALSE,FALSE,0.31,"F(1, 59) = 231.48"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,59,=,3.16,=,0.08,0.080616976,"F(1, 59) = 3.16, p = .08",FALSE,FALSE,FALSE,0.31,"F(1, 59) = 3.16"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,60,=,0.03,=,0.857,0.8630732303928619,"F(1, 60) = 0.030, p = .857",TRUE,FALSE,FALSE,0.36,"F(1, 60) = 0.030"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,60,=,16.01,<,0.001,1.7558973081820465e-4,"F(1, 60) = 16.01, p < .001",FALSE,FALSE,FALSE,0.31,"F(1, 60) = 16.01"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,60,=,2.57,=,0.12,0.11415958375376979,"F(1, 60) = 2.57, p = .12",TRUE,FALSE,FALSE,0.31,"F(1, 60) = 2.57"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,1,60,=,2.98,<,0.1,0.089445618,"F(1, 60) = 2.98, p < .10",FALSE,FALSE,FALSE,0.5,"F(1, 60) = 2.98"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,60,=,21.51,<,0.001,1.9533667712943666e-5,"F(1, 60) = 21.51, p < .001",FALSE,FALSE,FALSE,0.47,"F(1, 60) = 21.51"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,1,60,=,25.91,<,0.001,3.7984139334134346e-6,"F(1, 60) = 25.91, p < .001",FALSE,FALSE,FALSE,0.31,"F(1, 60) = 25.91"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,1,60,=,5.75,<,0.05,0.019616664,"F(1, 60) = 5.75, p < .05",FALSE,FALSE,FALSE,0.5,"F(1, 60) = 5.75"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,60,=,5.94,=,0.018,0.017782912758249395,"F(1, 60) = 5.94, p =
+.018",FALSE,FALSE,FALSE,0.47,"F(1, 60) = 5.94"
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,F,1,60,=,5.97,=,0.02,0.017510427067238907,"F(1, 60) = 5.97, p = .02",FALSE,FALSE,FALSE,0.67,"F(1, 60) = 5.97"
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,F,1,60,=,9.37,=,0.003,0.003297249,"F(1, 60) = 9.37, p = .003",FALSE,FALSE,FALSE,0.36,"F(1, 60) = 9.37"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,1,61,=,10.76,<,0.01,0.001717012,"F(1, 61) = 10.76, p < .01",FALSE,FALSE,FALSE,0.5,"F(1, 61) = 10.76"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,61,=,18,<,1e-4,7.633181089644332e-5,"F(1, 61) = 18.0, p < .0001",FALSE,FALSE,FALSE,0.82,"F(1, 61) = 18.0"
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,F,1,61,=,24.9,<,1e-4,5.328752422850438e-6,"F(1, 61) = 24.9, p < .0001",FALSE,FALSE,FALSE,0.82,"F(1, 61) = 24.9"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,1,62,=,103.01,<,1e-4,8.387589789426887e-15,"F(1, 62) = 103.01, p < .0001",FALSE,FALSE,FALSE,0.67,"F(1, 62) = 103.01"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,1,62,=,106.07,<,1e-4,4.720689415415228e-15,"F(1, 62) = 106.07, p < .0001",FALSE,FALSE,FALSE,0.67,"F(1, 62) = 106.07"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,1,62,=,4.91,=,0.0305,0.030381747081567684,"F(1, 62) = 4.91, p = .0305",FALSE,FALSE,FALSE,0.67,"F(1, 62) = 4.91"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,1,90,=,0.05,=,0.83,0.8235700548448466,"F(1, 90) = 0.05, p = .83",FALSE,FALSE,FALSE,0.5,"F(1, 90) = 0.05"
+Alicke et al. - 2010 - Mere Categorization and the Frog-Pond Effect.pdf,01,F,1,92,=,7.33,<,0.01,0.008084526,"F(1, 92) = 7.33, p < .01",FALSE,FALSE,TRUE,0.4,"F(1, 92) = 7.33"
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,F,1,97,=,5.67,=,0.019,0.019210242932249173,"F(1, 97) = 5.67, p = .019",FALSE,FALSE,FALSE,0.47,"F(1, 97) = 5.67"
+DeVoe and Iyengar - 2010 - Medium of Exchange Matters What’s Fair for Goods .pdf,01,F,1,991,=,385.15,<,0.001,1.058761190388273e-72,"F(1, 991) = 385.15, p < .001",FALSE,FALSE,FALSE,0.83,"F(1, 991) = 385.15"
+Filoteo et al. - 2010 - Removing the Frontal Lobes The Effects of Engagin.pdf,01,F,1,110,=,129.5,<,0.001,2.6627726266496708e-20,"F(1,110)=129.5, p<.001",FALSE,FALSE,FALSE,0.13,"F(1,110)=129.5"
+Filoteo et al. - 2010 - Removing the Frontal Lobes The Effects of Engagin.pdf,01,F,1,110,=,17.7,<,0.001,5.29663236248403e-5,"F(1,110)=17.7, p<.001",FALSE,FALSE,FALSE,0.13,"F(1,110)=17.7"
+Filoteo et al. - 2010 - Removing the Frontal Lobes The Effects of Engagin.pdf,01,F,1,110,=,9.2,<,0.01,0.003019476,"F(1,110)=9.2, p<.01",FALSE,FALSE,FALSE,0.13,"F(1,110)=9.2"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,1,14,=,22.01,<,0.001,3.467329508278365e-4,"F(1,14) = 22.01, p < .001",FALSE,FALSE,FALSE,0.62,"F(1,14) = 22.01"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,1,14,=,8.15,<,0.02,0.012728317530145581,"F(1,14) = 8.15, p < .02",FALSE,FALSE,FALSE,0.62,"F(1,14) = 8.15"
+Filoteo et al. - 2010 - Removing the Frontal Lobes The Effects of Engagin.pdf,01,F,1,147,=,90.8,<,0.001,4.6586507920300686e-17,"F(1,147) = 90.8, p < 0.001",FALSE,FALSE,FALSE,0.13,"F(1,147) = 90.8"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,1,15,=,7.08,<,0.01,0.017801878487899884,"F(1,15) = 7.08, p < .01",TRUE,FALSE,FALSE,0.62,"F(1,15) = 7.08"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,1,7,=,4.42,=,0.07,0.073612092,"F(1,7) = 4.42, p = .07",FALSE,FALSE,FALSE,0.62,"F(1,7) = 4.42"
+Miles et al. - 2010 - Moving Through Time.pdf,01,F,14,252,=,1.83,<,0.05,0.03483538,"F(14, 252) = 1.83, p < .05",FALSE,FALSE,FALSE,0.38,"F(14, 252) = 1.83"
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,F,2,114,=,15.31,<,0.01,1.289912246231528e-6,"F(2, 114) = 15.31, p < .01",FALSE,FALSE,FALSE,0.47,"F(2, 114) = 15.31"
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,F,2,114,=,28.99,<,0.001,6.627255027094979e-11,"F(2, 114) = 28.99, p < .001",FALSE,FALSE,FALSE,0.47,"F(2, 114) = 28.99"
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,F,2,114,=,8.11,<,0.01,5.092700527484753e-4,"F(2, 114) = 8.11, p < .01",FALSE,FALSE,FALSE,0.47,"F(2, 114) = 8.11"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,2,122,=,1.01,=,0.3667,0.36724367396432656,"F(2, 122) = 1.01, p = .3667",FALSE,FALSE,FALSE,0.67,"F(2, 122) = 1.01"
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,F,2,192,=,150.2,<,0.001,5.424824673417424e-40,"F(2, 192) = 150.2, p < .001",FALSE,FALSE,FALSE,0.27,"F(2, 192) = 150.2"
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,F,2,192,=,3.05,=,0.05,0.049660182,"F(2, 192) = 3.05, p = .05",FALSE,FALSE,FALSE,0.67,"F(2, 192) = 3.05"
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,F,2,195,=,4.57,<,0.05,0.011491688372599257,"F(2, 195) = 4.57, p < .05",FALSE,FALSE,FALSE,0.67,"F(2, 195) = 4.57"
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,F,2,26,=,116.38,<,1e-4,1.0641201611096157e-13,"F(2, 26) = 116.38, p < .0001",FALSE,FALSE,FALSE,0.9,"F(2, 26) = 116.38"
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,F,2,28,=,20.74,<,0.001,2.979717571008322e-6,"F(2, 28) = 20.74, p < .001",FALSE,FALSE,FALSE,0.53,"F(2, 28) = 20.74"
+Lyn et al. - 2010 - The Impact of Environment on the Comprehension of .pdf,01,F,2,28,=,3.606,=,0.04,0.040415014059085576,"F(2, 28) = 3.606, p = .04",FALSE,FALSE,FALSE,0.29,"F(2, 28) = 3.606"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,2,30,=,2.02,ns,NA,0.15030573429154945,"F(2, 30) = 2.02, n.s.",FALSE,FALSE,TRUE,0.67,"F(2, 30) = 2.02"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,2,30,=,20.83,<,0.001,2.1265067389592207e-6,"F(2, 30) = 20.83, p < .001",FALSE,FALSE,TRUE,0.67,"F(2, 30) = 20.83"
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,F,2,30,=,73.82,<,0.001,2.5924318787597503e-12,"F(2, 30) = 73.82, p < .001",FALSE,FALSE,FALSE,0.53,"F(2, 30) = 73.82"
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,F,2,32,=,113.38,<,1e-4,2.992577274660684e-15,"F(2, 32) = 113.38, p < .0001",FALSE,FALSE,FALSE,0.9,"F(2, 32) = 113.38"
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,F,2,34,=,2.04,=,0.15,0.1456443409312814,"F(2, 34)=2.04, p=.15",FALSE,FALSE,TRUE,0.93,"F(2, 34)=2.04"
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,F,2,379,=,6.39,=,0.002,0.001864754,"F(2, 379) = 6.39, p = .002",FALSE,FALSE,FALSE,0.32,"F(2, 379) = 6.39"
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,F,2,380,=,1.01,=,0.37,0.3651945689011678,"F(2, 380) = 1.01, p = .37",FALSE,FALSE,FALSE,0.32,"F(2, 380) = 1.01"
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,F,2,380,=,4.01,=,0.019,0.018906111,"F(2, 380) = 4.01, p = .019",FALSE,FALSE,FALSE,0.32,"F(2, 380) = 4.01"
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,F,2,56,=,1.16,=,0.32,0.3209034066408905,"F(2, 56) = 1.16, p = .32",FALSE,FALSE,FALSE,0.65,"F(2, 56) = 1.16"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,2,60,=,0.05,=,0.96,0.9512690159005435,"F(2, 60) = 0.05, p = .96",FALSE,FALSE,FALSE,0.31,"F(2, 60) = 0.05"
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,F,2,60,=,2.76,=,0.07,0.071337987,"F(2, 60) = 2.76, p = .07",FALSE,FALSE,FALSE,0.31,"F(2, 60) = 2.76"
+Lambert et al. - 2010 - Motivating Change in Relationships Can Prayer Inc.pdf,01,F,2,60,=,3.17,<,0.05,0.049121712,"F(2, 60) = 3.17, p < .05",FALSE,FALSE,FALSE,0.5,"F(2, 60) = 3.17"
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,F,2,60,=,4.64,=,0.013,0.013375226376969912,"F(2, 60) = 4.64, p=.013",FALSE,FALSE,TRUE,0.93,"F(2, 60) = 4.64"
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,F,2,60,=,0.4,=,0.67,0.6720941779627287,"F(2, 60)=.40, p=.67",FALSE,FALSE,TRUE,0.93,"F(2, 60)=.40"
+Kelly et al. - 2010 - Two Sides of the Same Coin Speech and Gesture Mut.pdf,01,F,2,80,=,1.19,ns,NA,0.30954798039552345,"F(2, 80) = 1.19, n.s.",FALSE,FALSE,TRUE,0.67,"F(2, 80) = 1.19"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,2,90,=,1.22,=,0.2929,0.3000652948776003,"F(2, 90) = 1.22, p = .2929",TRUE,FALSE,FALSE,0.67,"F(2, 90) = 1.22"
+Pacheco-Unguetti et al. - 2010 - Attention and Anxiety Different Attentional Funct.pdf,01,F,2,90,=,4.42,=,0.0147,0.014755018960640786,"F(2, 90) = 4.42, p = .0147",FALSE,FALSE,FALSE,0.67,"F(2, 90) = 4.42"
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,F,2,92,=,8.13,<,0.01,5.606747668946577e-4,"F(2, 92) = 8.13, p < .01",FALSE,FALSE,FALSE,0.45,"F(2, 92) = 8.13"
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,F,2,96,=,3.2,=,0.045,0.045146207,"F(2, 96)=3.20, p=.045",FALSE,FALSE,TRUE,0.93,"F(2, 96)=3.20"
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,F,2,47,=,0.49,=,0.62,0.6157209576025071,"F(2,47)=.49, p=.62",FALSE,FALSE,TRUE,0.93,"F(2,47)=.49"
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,F,3,196,=,21.91,<,0.001,2.8024024121111117e-12,"F(3, 196) = 21.91, p < .001",FALSE,FALSE,FALSE,0.27,"F(3, 196) = 21.91"
+Deater-Deckard et al. - 2010 - Maternal Working Memory and Reactive Negativity in.pdf,01,F,3,208,=,3.04,<,0.01,0.030003141952975067,"F(3, 208) = 3.04, p < .01",TRUE,FALSE,TRUE,0.45,"F(3, 208) = 3.04"
+DeVoe and Iyengar - 2010 - Medium of Exchange Matters What’s Fair for Goods .pdf,01,F,3,260,=,1.02,=,0.38,0.38428837242620684,"F(3, 260) = 1.02, p = .38",FALSE,FALSE,FALSE,0.83,"F(3, 260) = 1.02"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,3,46,=,3.13,=,0.035,0.034551555287761326,"F(3, 46) = 3.13, p = .035",FALSE,FALSE,FALSE,0.85,"F(3, 46) = 3.13"
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,F,3,49,=,2.82,=,0.048,0.048512739082650753,"F(3, 49) = 2.82, p = .048",FALSE,FALSE,FALSE,0.85,"F(3, 49) = 2.82"
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,F,3,96,=,19.9,<,0.001,4.115422141857764e-10,"F(3, 96) = 19.9, p < .001",FALSE,FALSE,FALSE,0.27,"F(3, 96) = 19.9"
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,F,3,96,=,53.9,<,0.001,1.634473607493304e-20,"F(3, 96) = 53.9, p < .001",FALSE,FALSE,FALSE,0.27,"F(3, 96) = 53.9"
+Deater-Deckard et al. - 2010 - Maternal Working Memory and Reactive Negativity in.pdf,01,F,4,211,=,13.28,<,0.001,1.1441227612272619e-9,"F(4, 211) = 13.28, p < .001",FALSE,FALSE,TRUE,0.45,"F(4, 211) = 13.28"
+Lyn et al. - 2010 - The Impact of Environment on the Comprehension of .pdf,01,F,4,28,=,0.47,>,0.05,0.7572510029465167,"F(4, 28) = 0.47, p >.05",FALSE,FALSE,FALSE,0.29,"F(4, 28) = 0.47"
+DeVoe and Iyengar - 2010 - Medium of Exchange Matters What’s Fair for Goods .pdf,01,F,4,402,=,2.45,<,0.05,0.045673506,"F(4, 402) = 2.45, p < .05",FALSE,FALSE,FALSE,0.83,"F(4, 402) = 2.45"
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,F,4,60,=,7.11,<,1e-4,9.382350630540941e-5,"F(4, 60) = 7.11, p < .0001",FALSE,FALSE,FALSE,0.53,"F(4, 60) = 7.11"
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,F,4,64,=,7.719,<,1e-4,3.856476041144638e-5,"F(4, 64) = 7.719, p < .0001",FALSE,FALSE,FALSE,0.53,"F(4, 64) = 7.719"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,4,112,=,3.62,<,0.05,0.008182195,"F(4,112) = 3.62, p < .05",FALSE,FALSE,FALSE,0.62,"F(4,112) = 3.62"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,8,112,=,2.02,=,0.05,0.050250872,"F(8,112) = 2.02, p=.05",FALSE,FALSE,FALSE,0.62,"F(8,112) = 2.02"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,8,112,=,2.1,<,0.05,0.041463328754383875,"F(8,112) = 2.10, p < .05",FALSE,FALSE,FALSE,0.62,"F(8,112) = 2.10"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,9,108,=,2.29,<,0.03,0.021554149254028335,"F(9,108) = 2.29, p < .03",FALSE,FALSE,FALSE,0.62,"F(9,108) = 2.29"
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,F,9,108,=,3.76,<,0.01,3.80646892821906e-4,"F(9,108) = 3.76, p < .01",FALSE,FALSE,FALSE,0.62,"F(9,108) = 3.76"
+Stirrat and Perrett - 2010 - Valid Facial Cues to Cooperation and Trust Male F.pdf,01,Chi2,2,NA,=,0.11,=,0.95,0.9464851479534838,"H(2) = .11, p = .95",FALSE,FALSE,TRUE,0.05,
+Deater-Deckard et al. - 2010 - Maternal Working Memory and Reactive Negativity in.pdf,01,r,NA,11,=,0.48,<,0.05,0.04845332,"r(11) = .48, p < .05",FALSE,FALSE,TRUE,0.45,r(11) = .48
+Knoch et al. - 2010 - A Neural Marker of Costly Punishment Behavior.pdf,01,r,NA,18,=,0.71,<,0.05,4.5307807053242977e-4,"r(18) = .71, p < .05",FALSE,FALSE,FALSE,0.6,r(18) = .71
+Knoch et al. - 2010 - A Neural Marker of Costly Punishment Behavior.pdf,01,r,NA,18,=,0.72,<,0.05,3.441281438327844e-4,"r(18) = .72, p < .05",FALSE,FALSE,FALSE,0.6,r(18) = .72
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,r,NA,205,=,0.56,<,0.01,1.745976078685868e-18,"r(205) = .56, p < .01",FALSE,FALSE,FALSE,0.67,r(205) = .56
+Chen et al. - 2010 - How Low Socioeconomic Status Affects 2-Year Hormon.pdf,01,r,NA,49,=,-0.29,<,0.05,0.038992822509118626,"r(49) = −.29, p < .05",FALSE,FALSE,TRUE,0.2,r(49) = .29
+Chen et al. - 2010 - How Low Socioeconomic Status Affects 2-Year Hormon.pdf,01,r,NA,49,=,-0.47,<,0.01,5.016271935713922e-4,"r(49) = –.47, p < .01",FALSE,FALSE,TRUE,0.2,r(49) = .47
+Deater-Deckard et al. - 2010 - Maternal Working Memory and Reactive Negativity in.pdf,01,r,NA,8,=,-0.05,ns,NA,0.8908980275878906,"r(8) = −.05, n.s.",FALSE,FALSE,TRUE,0.45,r(8) = .05
+Balcetis and Dunning - 2010 - Wishful Seeing More Desired Objects Are Seen as C.pdf,01,r,NA,88,=,-0.04,=,0.68,0.7081671966055152,"r(88) = –.04, p = .68",FALSE,FALSE,FALSE,0.02,r(88) = .04
+Southgate et al. - 2010 - Motor System Activation Reveals Infants’ On-Line P.pdf,01,t,NA,10,=,0.983,=,0.42,0.34879208002234363,"t(10) = .983, p = .42",TRUE,FALSE,FALSE,0.5,t(10) = .983
+Southgate et al. - 2010 - Motor System Activation Reveals Infants’ On-Line P.pdf,01,t,NA,10,=,3.23,=,0.009,0.009020952,"t(10) = 3.23, p = .009",FALSE,FALSE,FALSE,0.5,t(10) = 3.23
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,103,=,2.57,=,0.012,0.011600486382683588,"t(103) = 2.57, p = .012",FALSE,FALSE,FALSE,0.47,t(103) = 2.57
+Alario et al. - 2010 - The Functional Origin of the Foreign Accent Evide.pdf,01,t,NA,11319,=,2.01,<,0.05,0.044454871,"t(11319) = 2.01, p < .05",FALSE,FALSE,FALSE,1,t(11319) = 2.01
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,t,NA,114,=,12,<,0.001,5.991026093050553e-22,"t(114) = 12.00, p < .001",FALSE,FALSE,FALSE,0.32,t(114) = 12.00
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,t,NA,114,=,-6.243,<,0.001,7.573740317643698e-9,"t(114) = –6.243, p < .001",FALSE,FALSE,FALSE,0.47,t(114) = 6.243
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,t,NA,114,=,-8.97,<,0.001,6.9046315120281236e-15,"t(114) = –8.97, p < .001",FALSE,FALSE,FALSE,0.47,t(114) = 8.97
+Fetchenhauer and Dunning - 2010 - Why So Cynical Asymmetric Feedback Underlies Mis.pdf,01,t,NA,119,=,-17.14,<,0.001,6.244104263650303e-34,"t(119) = –17.14, p < .001",FALSE,FALSE,FALSE,0.47,t(119) = 17.14
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,t,NA,12,=,-2.419,=,0.03,0.032376506762493346,"t(12) = –2.419, p = .03",FALSE,FALSE,FALSE,0.53,t(12) = 2.419
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,t,NA,128,=,10.39,<,0.001,1.033044402169374e-18,"t(128) = 10.39, p < .001",FALSE,FALSE,FALSE,0.32,t(128) = 10.39
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,129,=,4.9,<,1e-4,2.8201970312658612e-6,"t(129) = 4.9, p < .0001",FALSE,FALSE,FALSE,0.82,t(129) = 4.9
+"Hardisty et al. - 2010 - A Dirty Word or a Dirty World Attribute Framing,.pdf",01,t,NA,129,=,1.7,=,0.09,0.091540793,"t(129) =
+1.7, p = .09",FALSE,FALSE,TRUE,0.15,t(129) =1.7
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,13,=,0.686,=,0.505,0.5047643049452133,"t(13) = 0.686, p = .505",FALSE,FALSE,FALSE,0.67,t(13) = 0.686
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,t,NA,13,=,11.87,<,0.005,2.381166118613788e-8,"t(13) = 11.87, p < .005",FALSE,FALSE,FALSE,0.44,t(13) = 11.87
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,13,=,-0.49,=,0.63,0.6322993217896029,"t(13)=-.49, p=.63",FALSE,FALSE,TRUE,0.93,t(13)=.49
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,13,=,1.76,=,0.103,0.1019010497412431,"t(13)=1.76, p=.103",FALSE,FALSE,TRUE,0.93,t(13)=1.76
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,13,=,-3.44,=,0.004,0.004391625,"t(13)=-3.44, p=.004",FALSE,FALSE,TRUE,0.93,t(13)=3.44
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,134,=,0.5,>,0.6,0.6178951717401273,"t(134) = 0.5, p > .6",FALSE,FALSE,FALSE,0.82,t(134) = 0.5
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,t,NA,138,=,11.4,<,0.001,1.2587464424994615e-21,"t(138) = 11.40, p < .001",FALSE,FALSE,FALSE,0.32,t(138) = 11.40
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,144,=,0.81,ns,NA,0.4192766968964211,"t(144) = 0.81, n.s.",FALSE,FALSE,FALSE,0.86,t(144) = 0.81
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,145,=,0.96,ns,NA,0.33865327855642013,"t(145) = 0.96, n.s.",FALSE,FALSE,FALSE,0.86,t(145) = 0.96
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,146,=,0.52,ns,NA,0.603851134,"t(146) = 0.52, n.s.",FALSE,FALSE,FALSE,0.86,t(146) = 0.52
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,146,=,-0.57,ns,NA,0.5695537689639788,"t(146) = –0.57, n.s.",FALSE,FALSE,FALSE,0.86,t(146) = 0.57
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,146,=,4.71,<,0.001,5.712159918582084e-6,"t(146) = 4.71, p < .001",FALSE,FALSE,FALSE,0.86,t(146) = 4.71
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,147,=,0.22,ns,NA,0.826176377,"t(147) = 0.22, n.s.",FALSE,FALSE,FALSE,0.86,t(147) = 0.22
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,147,=,1.45,ns,NA,0.1491887652944982,"t(147) = 1.45, n.s.",FALSE,FALSE,FALSE,0.86,t(147) = 1.45
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,147,=,2.41,<,0.02,0.017188592335761747,"t(147) = 2.41, p < .02",FALSE,FALSE,FALSE,0.86,t(147) = 2.41
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,147,=,-8.23,<,0.001,9.231165148832085e-14,"t(147) = –8.23, p < .001",FALSE,FALSE,FALSE,0.86,t(147) = 8.23
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,148,=,-5.4,<,0.001,2.5973947359434504e-7,"t(148) = –5.40, p <.001",FALSE,FALSE,FALSE,0.86,t(148) = 5.40
+Cutting et al. - 2010 - Attention and the Evolution of Hollywood Film.pdf,01,t,NA,148,=,6.01,<,1e-4,1.381895818562095e-8,"t(148) = 6.01, p < .0001",FALSE,FALSE,FALSE,0.2,t(148) = 6.01
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,15,=,1.64,=,0.12,0.12180277297752207,"t(15) = 1.64, p = .12",FALSE,FALSE,TRUE,0.16,t(15) = 1.64
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,t,NA,15,=,2.08,=,0.054,0.055086628,"t(15) = 2.08, p = .054",TRUE,FALSE,FALSE,0.53,t(15) = 2.08
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,t,NA,15,=,3.31,=,0.005,0.004760288,"t(15) = 3.31, p = .005",FALSE,FALSE,FALSE,0.53,t(15) = 3.31
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,1.3,=,0.22,0.21322332111326284,"t(15)=1.3, p=.22",FALSE,FALSE,FALSE,0.27,t(15)=1.3
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,1.8,=,0.09,0.092002118,"t(15)=1.8, p=.09",FALSE,FALSE,FALSE,0.27,t(15)=1.8
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,15,=,1.99,=,0.033,0.03256959,"t(15)=1.99, p=.033",FALSE,FALSE,TRUE,0.93,t(15)=1.99
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,15,=,2,=,0.032,0.031972504,"t(15)=2.00, p=.032",FALSE,FALSE,TRUE,0.93,t(15)=2.00
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,2.4,=,0.03,0.029824929,"t(15)=2.4, p=.03",FALSE,FALSE,FALSE,0.27,t(15)=2.4
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,2.5,=,0.03,0.024505803246513795,"t(15)=2.5, p=.03",FALSE,FALSE,FALSE,0.27,t(15)=2.5
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,2.8,=,0.01,0.013459726420006582,"t(15)=2.8, p=.01",FALSE,FALSE,FALSE,0.27,t(15)=2.8
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,3.2,=,0.006,0.005963848,"t(15)=3.2 , p=.006",FALSE,FALSE,FALSE,0.27,t(15)=3.2 
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,6.8,<,1e-4,5.9927416058019135e-6,"t(15)=6.8, p<.0001",FALSE,FALSE,FALSE,0.27,t(15)=6.8
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,6.8,<,1e-4,5.9927416058019135e-6,"t(15)=6.8, p< .0001",FALSE,FALSE,FALSE,0.27,t(15)=6.8
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,7.2,<,1e-4,3.073437767724879e-6,"t(15)=7.2, p< .0001",FALSE,FALSE,FALSE,0.27,t(15)=7.2
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,7.2,<,1e-4,3.073437767724879e-6,"t(15)=7.2, p< .0001",FALSE,FALSE,FALSE,0.27,t(15)=7.2
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,15,=,7.5,<,1e-4,1.8888538604708052e-6,"t(15)=7.5, p< .0001",FALSE,FALSE,FALSE,0.27,t(15)=7.5
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,t,NA,16,=,17.76,<,1e-4,5.923554127451326e-12,"t(16) = 17.76, p < .0001",FALSE,FALSE,FALSE,0.9,t(16) = 17.76
+Bahrami et al. - 2010 - Unconscious Numerical Priming Despite Interocular .pdf,01,t,NA,16,=,3.03,=,0.008,0.007964774,"t(16) = 3.03, p = .008",FALSE,FALSE,FALSE,0.53,t(16) = 3.03
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,t,NA,16,=,47.2,<,1e-4,1.3167526708991989e-18,"t(16) = 47.20, p < .0001",FALSE,FALSE,FALSE,0.9,t(16) = 47.20
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,t,NA,16,=,6.03,<,1e-4,1.7502218398815176e-5,"t(16) = 6.03, p < .0001",FALSE,FALSE,FALSE,0.9,t(16) = 6.03
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,t,NA,16,=,6.25,<,1e-4,1.1596619426673932e-5,"t(16) = 6.25, p < .0001",FALSE,FALSE,FALSE,0.9,t(16) = 6.25
+"Talati et al. - 2010 - Now You See It, Now You Don’t Shedding Light on t.pdf",01,t,NA,16,=,8,<,1e-4,5.545447643693234e-7,"t(16) = 8.00, p < .0001",FALSE,FALSE,FALSE,0.9,t(16) = 8.00
+Zauberman et al. - 2010 - 1995 Feels So Close Yet So Far The Effect of Even.pdf,01,t,NA,163,=,5.09,<,1e-4,9.777392726725771e-7,"t(163) = 5.09, p < .0001",FALSE,FALSE,FALSE,0.65,t(163) = 5.09
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,t,NA,172,=,15.87,<,0.001,1.6198665518903118e-35,"t(172) = 15.87, p < .001",FALSE,FALSE,FALSE,0.88,t(172) = 15.87
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,18.8,=,3.08,=,0.003,0.003109534,"t(18.8)=3.08, p=.003",FALSE,FALSE,TRUE,0.93,t(18.8)=3.08
+Miles et al. - 2010 - Moving Through Time.pdf,01,t,NA,18,=,1.53,ns,NA,0.14340125914178847,"t(18) = 1.53, n.s.",FALSE,FALSE,FALSE,0.38,t(18) = 1.53
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,t,NA,18,=,3.44,<,0.09,0.002920797,"t(18) = 3.44, p < .09",FALSE,FALSE,FALSE,0.44,t(18) = 3.44
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,t,NA,18,=,4.42,<,0.05,3.3051914163120745e-4,"t(18) = 4.42, p < .05",FALSE,FALSE,FALSE,0.44,t(18) = 4.42
+Yashar and Lamy - 2010 - Intertrial Repetition Facilitates Selection in Tim.pdf,01,t,NA,18,=,5.51,<,0.04,3.121208764032933e-5,"t(18) = 5.51, p < .04",FALSE,FALSE,FALSE,0.44,t(18) = 5.51
+Willems et al. - 2010 - A Dissociation Between Linguistic and Communicativ.pdf,01,t,NA,19,=,2.3,=,0.02,0.032952582,"t(19) = 2.30, p = .02",TRUE,FALSE,FALSE,0.1,t(19) = 2.30
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,20.4,=,1.77,=,0.046,0.04583644,"t(20.4)=1.77, p=.046",FALSE,FALSE,TRUE,0.93,t(20.4)=1.77
+Saguy et al. - 2010 - Interacting Like a Body Objectification Can Lead .pdf,01,t,NA,204,=,1.12,=,0.26,0.2640306339732969,"t(204) = 1.12, p = .26",FALSE,FALSE,FALSE,0.67,t(204) = 1.12
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,t,NA,213,=,2.75,<,0.01,0.006471935,"t(213) = 2.75, p < .01",FALSE,FALSE,FALSE,0.88,t(213) = 2.75
+Sayette et al. - 2010 - Out for a Smoke The Impact of Cigarette Craving o.pdf,01,t,NA,23,=,1.62,=,0.059,0.059431901,"t(23) = 1.62, p = .059",FALSE,FALSE,TRUE,0.33,t(23) = 1.62
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,t,NA,23,=,2.12,<,0.05,0.045009092681862345,"t(23) = 2.12, p < .05",FALSE,FALSE,FALSE,0.45,t(23) = 2.12
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,t,NA,23,=,2.71,<,0.05,0.012492062204601192,"t(23) = 2.71, p < .05",FALSE,FALSE,FALSE,0.45,t(23) = 2.71
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,240,=,2.37,<,0.02,0.018579713113488966,"t(240) = 2.37, p < .02",FALSE,FALSE,FALSE,0.86,t(240) = 2.37
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,242,=,-4.63,<,0.001,5.969568310103012e-6,"t(242) = –4.63, p < .001",FALSE,FALSE,FALSE,0.86,t(242) = 4.63
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,242,=,-8.24,<,0.001,1.089913171719331e-14,"t(242) = –8.24, p < .001",FALSE,FALSE,FALSE,0.86,t(242) = 8.24
+Byers-Heinlein et al. - 2010 - The Roots of Bilingualism in Newborns.pdf,01,t,NA,25.5,=,1.89,=,0.035,0.035088344,"t(25.5)=1.89, p=.035",FALSE,FALSE,TRUE,0.93,t(25.5)=1.89
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,252,=,-2.12,<,0.04,0.034983617835206086,"t(252) = –2.12, p < .04",FALSE,FALSE,FALSE,0.86,t(252) = 2.12
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,26,=,1.02,=,0.32,0.3171262786527884,"t(26) = 1.02, p = .32",FALSE,FALSE,FALSE,0.47,t(26) = 1.02
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,260,=,-1.97,<,0.05,0.04989961,"t(260) = –1.97, p < .05",FALSE,FALSE,FALSE,0.86,t(260) = 1.97
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,260,=,3.18,<,0.003,0.001651261,"t(260) = 3.18, p < .003",FALSE,FALSE,FALSE,0.86,t(260) = 3.18
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,260,=,-3.59,<,0.001,3.95194091476052e-4,"t(260) = –3.59, p < .001",FALSE,FALSE,FALSE,0.86,t(260) = 3.59
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,261,=,2.88,<,0.005,0.00430672,"t(261) = 2.88, p < .005",FALSE,FALSE,FALSE,0.86,t(261) = 2.88
+Simpson et al. - 2010 - Attachment Working Models Twist Memories of Relati.pdf,01,t,NA,265,=,1.97,<,0.05,0.049879557,"t(265) = 1.97, p < .05",FALSE,FALSE,FALSE,0.86,t(265) = 1.97
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,27,=,1.52,=,0.14,0.14013607431208225,"t(27) = 1.52, p = .14",FALSE,FALSE,FALSE,0.47,t(27) = 1.52
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,t,NA,279,=,20.42,<,0.001,2.56338592438205e-57,"t(279) = 20.42, p < .001",FALSE,FALSE,FALSE,0.88,t(279) = 20.42
+Li et al. - 2010 - How Do People Value Life.pdf,01,t,NA,2896,=,12.11,<,0.001,5.775095916345418e-33,"t(2896) = 12.11, p < .001",FALSE,FALSE,FALSE,0.42,t(2896) = 12.11
+Li et al. - 2010 - How Do People Value Life.pdf,01,t,NA,2896,=,6.92,<,1e-4,5.5380845064371595e-12,"t(2896) = 6.92, p < .0001",FALSE,FALSE,FALSE,0.42,t(2896) = 6.92
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,29,=,1.16,=,0.26,0.2555101701997857,"t(29) = 1.16, p = .26",FALSE,FALSE,FALSE,0.73,t(29) = 1.16
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,29,=,1.82,=,0.08,0.07909575,"t(29) = 1.82,
+p = .08",FALSE,FALSE,FALSE,0.73,t(29) = 1.82
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,29,=,2.87,<,0.01,0.00758546,"t(29) = 2.87, p < .01",FALSE,FALSE,FALSE,0.73,t(29) = 2.87
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,29,=,3.068,=,0.005,0.00463763,"t(29) = 3.068, p = .005",FALSE,FALSE,FALSE,0.67,t(29) = 3.068
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,29,=,4.252,<,0.001,2.0104227382857496e-4,"t(29) = 4.252, p < .001",FALSE,FALSE,FALSE,0.67,t(29) = 4.252
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,30,=,0.47,=,0.64,0.6417537774770499,"t(30) = 0.47, p = .64",FALSE,FALSE,FALSE,0.73,t(30) = 0.47
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,30,=,0.9,=,0.38,0.375288287,"t(30) = 0.90, p = .38",FALSE,FALSE,FALSE,0.73,t(30) = 0.90
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,30,=,1.05,=,0.3,0.30210338116172064,"t(30) = 1.05, p = .30",FALSE,FALSE,TRUE,0.16,t(30) = 1.05
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,30,=,1.08,=,0.28,0.28874863410377644,"t(30) = 1.08, p = .28",TRUE,FALSE,TRUE,0.16,t(30) = 1.08
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,30,=,1.15,=,0.26,0.2592290079868841,"t(30) = 1.15, p = .26",FALSE,FALSE,TRUE,0.16,t(30) = 1.15
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,30,=,1.2,=,0.24,0.2395303508896625,"t(30) = 1.20, p = .24",FALSE,FALSE,TRUE,0.16,t(30) = 1.20
+"Strick et al. - 2010 - Unconscious-Thought Effects Take Place Off-Line, N.pdf",01,t,NA,30,=,1.52,=,0.14,0.13898141102569347,"t(30) = 1.52, p = .14",FALSE,FALSE,FALSE,0.73,t(30) = 1.52
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,30,=,-3.1,=,0.004,0.004184485,"t(30) = –3.1,
+p = .004",FALSE,FALSE,FALSE,0.75,t(30) = 3.1
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,30,=,3.94,<,0.001,4.501807625196136e-4,"t(30) = 3.94, p < .001",FALSE,FALSE,FALSE,0.47,t(30) = 3.94
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,0.03,=,0.98,0.9762593663038301,"t(31) = 0.03, p = .98",FALSE,FALSE,FALSE,0.67,t(31) = 0.03
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,0.62,=,0.54,0.5397888915052704,"t(31) = 0.62, p = .54",FALSE,FALSE,FALSE,0.67,t(31) = 0.62
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,2.71,=,0.01,0.010863792750561875,"t(31) = 2.71, p = .01",FALSE,FALSE,FALSE,0.67,t(31) = 2.71
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,2.75,=,0.01,0.009855575,"t(31) = 2.75, p = .01",FALSE,FALSE,FALSE,0.67,t(31) = 2.75
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,3.41,=,0.002,0.001822159,"t(31) = 3.41, p = .002",FALSE,FALSE,FALSE,0.67,t(31) = 3.41
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,31,=,7.62,<,0.001,1.3632264661482633e-8,"t(31) = 7.62, p < .001",FALSE,FALSE,FALSE,0.67,t(31) = 7.62
+Miller and Maner - 2010 - Scent of a Woman Men’s Testosterone Responses to .pdf,01,t,NA,33,=,1.13,=,0.27,0.26662296578371825,"t(33) = 1.13, p = .27",FALSE,FALSE,FALSE,0.31,t(33) = 1.13
+"Kay et al. - 2010 - Randomness, Attributions of Arousal, and Belief in.pdf",01,t,NA,33,=,2.15,<,0.04,0.038978652,"t(33) = 2.15, p < .04",FALSE,FALSE,FALSE,0.5,t(33) = 2.15
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,33,=,5.16,<,0.001,1.1508800909894217e-5,"t(33) = 5.16, p < .001",FALSE,FALSE,FALSE,0.47,t(33) = 5.16
+"Hardisty et al. - 2010 - A Dirty Word or a Dirty World Attribute Framing,.pdf",01,t,NA,332,=,4,<,1e-4,7.813094787747265e-5,"t(332) = 4, p < .0001",FALSE,FALSE,TRUE,0.15,t(332) = 4
+"Hardisty et al. - 2010 - A Dirty Word or a Dirty World Attribute Framing,.pdf",01,t,NA,333,=,1.2,>,0.2,0.23099236927030906,"t(333) = 1.2, p > .2",FALSE,FALSE,TRUE,0.15,t(333) = 1.2
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,34.315,=,2.159,<,0.0501,0.037929376,"t(34.315) = 2.159, p < .0501",FALSE,FALSE,FALSE,0.67,t(34.315) = 2.159
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,35,=,2.36,=,0.024,0.02397983,"t(35) = 2.36, p = .024",FALSE,FALSE,FALSE,0.47,t(35) = 2.36
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,37,=,1.66,=,0.106,0.10536775992581152,"t(37) = 1.66, p = .106",FALSE,FALSE,FALSE,0.45,t(37) = 1.66
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,t,NA,38,=,4.6,<,0.01,4.592409963818053e-5,"t(38) = 4.60, p < .01",FALSE,FALSE,FALSE,0.45,t(38) = 4.60
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,t,NA,38,=,4.71,<,0.01,3.270696636408418e-5,"t(38) = 4.71, p < .01",FALSE,FALSE,FALSE,0.45,t(38) = 4.71
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,40,=,-9.6,<,0.001,6.184304865246494e-12,"t(40) = –9.6, p < .001",FALSE,FALSE,FALSE,0.75,t(40) = 9.6
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,42.717,=,1.889,=,0.066,0.065693005,"t(42.717) = 1.889, p = .066",FALSE,FALSE,FALSE,0.67,t(42.717) = 1.889
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,t,NA,42,=,1.06,ns,NA,0.29520258607194844,"t(42) = 1.06, n.s.",FALSE,FALSE,FALSE,0.85,t(42) = 1.06
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,t,NA,42,=,7.45,<,0.001,3.3250681872401995e-9,"t(42) = 7.45, p < .001",FALSE,FALSE,FALSE,0.85,t(42) = 7.45
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,43,=,-1.921,=,0.061,0.061377565,"t(43) = –1.921, p = .061",FALSE,FALSE,FALSE,0.67,t(43) = 1.921
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,43,=,-0.343,=,0.733,0.7332697155793054,"t(43)= –0.343, p = .733",FALSE,FALSE,FALSE,0.67,t(43)= 0.343
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,46,=,0.15,=,0.88,0.8814203967405603,"t(46) = 0.15, p = .88",FALSE,FALSE,FALSE,0.75,t(46) = 0.15
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,t,NA,46,=,3.1,=,0.003,0.003298821,"t(46) = 3.1, p = .003",FALSE,FALSE,FALSE,0.85,t(46) = 3.1
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,46,=,3.15,=,0.003,0.002868261,"t(46) = 3.15, p = .003",FALSE,FALSE,FALSE,0.75,t(46) = 3.15
+Campbell et al. - 2010 - Hyper-Binding A Unique Age Effect.pdf,01,t,NA,46,=,5.84,<,0.01,5.027221526499913e-7,"t(46) = 5.84, p < .01",FALSE,FALSE,FALSE,0.45,t(46) = 5.84
+Chen et al. - 2010 - How Low Socioeconomic Status Affects 2-Year Hormon.pdf,01,t,NA,47,=,2.32,<,0.05,0.024733442149512556,"t(47) = 2.32, p < .05",FALSE,FALSE,TRUE,0.2,t(47) = 2.32
+Chen et al. - 2010 - How Low Socioeconomic Status Affects 2-Year Hormon.pdf,01,t,NA,47,=,2.88,<,0.01,0.005971429,"t(47) =
+2.88, p < .01",FALSE,FALSE,TRUE,0.2,t(47) =2.88
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,t,NA,49,=,2.11,=,0.04,0.03998851,"t(49) = 2.11, p = .04",FALSE,FALSE,FALSE,0.85,t(49) = 2.11
+Li et al. - 2010 - How Do People Value Life.pdf,01,t,NA,500,=,3.28,=,0.001,0.001110471,"t(500) = 3.28, p = .001",FALSE,FALSE,FALSE,0.42,t(500) = 3.28
+Li et al. - 2010 - How Do People Value Life.pdf,01,t,NA,5022,=,23.27,<,0.001,7.767940143113502e-114,"t(5022) = 23.27, p < .001",FALSE,FALSE,FALSE,0.42,t(5022) = 23.27
+Li et al. - 2010 - How Do People Value Life.pdf,01,t,NA,5022,=,3.16,<,0.01,0.001587065,"t(5022) = 3.16, p < .01",FALSE,FALSE,FALSE,0.42,t(5022) = 3.16
+Chen et al. - 2010 - How Low Socioeconomic Status Affects 2-Year Hormon.pdf,01,t,NA,51,=,2.88,<,0.01,0.005800929,"t(51) = 2.88, p < .01",FALSE,FALSE,TRUE,0.2,t(51) = 2.88
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,57,=,2.76,=,0.008,0.007760001,"t(57) = 2.76, p = .008",FALSE,FALSE,FALSE,0.45,t(57) = 2.76
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,57,=,5.073,<,0.001,4.455324679635533e-6,"t(57) = 5.073, p < .001",FALSE,FALSE,FALSE,0.67,t(57) = 5.073
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,57,=,5.35,<,0.001,1.6221589584186555e-6,"t(57) = 5.35, p < .001",FALSE,FALSE,FALSE,0.45,t(57) = 5.35
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,57,=,5.81,<,0.001,2.938743299848503e-7,"t(57) = 5.81, p < .001",FALSE,FALSE,FALSE,0.45,t(57) = 5.81
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,58,=,0.4,>,0.7,0.6906259186551778,"t(58) = 0.4, p > .7",FALSE,FALSE,FALSE,0.82,t(58) = 0.4
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,58,=,7,<,1e-4,2.9311365291233535e-9,"t(58) = 7.0, p < .0001",FALSE,FALSE,FALSE,0.82,t(58) = 7.0
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,t,NA,62,=,0.24,=,0.811,0.8111219954802901,"t(62) = 0.240, p = .811",FALSE,FALSE,FALSE,0.36,t(62) = 0.240
+Lany and Saffran - 2010 - From Statistics to Meaning Infants’ Acquisition o.pdf,01,t,NA,62,=,2.35,=,0.02,0.021971306062534373,"t(62) = 2.35, p = .02",FALSE,FALSE,FALSE,0.67,t(62) = 2.35
+Weis and Cerankosky - 2010 - Effects of Video-Game Ownership on Young Boys’ Aca.pdf,01,t,NA,62,=,6.65,<,0.001,8.642785761676877e-9,"t(62) = 6.65, p < .001",FALSE,FALSE,FALSE,0.36,t(62) = 6.65
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,64,=,7.8,<,1e-4,7.26107792009664e-11,"t(64) = 7.8, p < .0001",FALSE,FALSE,FALSE,0.82,t(64) = 7.8
+Vries et al. - 2010 - Happiness Cools the Warm Glow of Familiarity Psyc.pdf,01,t,NA,7,=,3.11,<,0.02,0.017081211681232448,"t(7) = 3.11, p < .02",FALSE,FALSE,FALSE,0.62,t(7) = 3.11
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,7,=,2.7,=,0.03,0.030639027164199167,"t(7)=2.7, p=.03",FALSE,FALSE,FALSE,0.27,t(7)=2.7
+Flevaris et al. - 2010 - Local or Global Attentional Selection of Spatial.pdf,01,t,NA,7,=,4.3,=,0.004,0.003566602,"t(7)=4.3, p=.004",FALSE,FALSE,FALSE,0.27,t(7)=4.3
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,70,=,3.55,<,0.001,6.934219767627041e-4,"t(70) = 3.55, p < .001",FALSE,FALSE,FALSE,0.45,t(70) = 3.55
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,71,=,0.318,=,0.751,0.7514183756785231,"t(71) = 0.318, p = .751",FALSE,FALSE,FALSE,0.67,t(71) = 0.318
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,71,=,-1.371,=,0.175,0.17469319641632777,"t(71) = –1.371, p = .175",FALSE,FALSE,FALSE,0.67,t(71) = 1.371
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,74,=,1.14,=,0.22,0.2579627546752827,"t(74) = 1.14, p = .22",TRUE,FALSE,FALSE,0.75,t(74) = 1.14
+Konar et al. - 2010 - Holistic Processing Is Not Correlated With Face-Id.pdf,01,t,NA,75,=,0.45,=,0.66,0.6540084426183979,"t(75) = 0.45, p = .66",FALSE,FALSE,FALSE,0.75,t(75) = 0.45
+Sackett et al. - 2010 - You’re Having Fun When Time Flies The Hedonic Con.pdf,01,t,NA,77,=,2.95,=,0.006,0.004207527,"t(77) = 2.95, p = .006",TRUE,FALSE,FALSE,0.47,t(77) = 2.95
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,79,=,2.26,=,0.027,0.026574945,"t(79) = 2.26, p = .027",FALSE,FALSE,FALSE,0.45,t(79) = 2.26
+Mazar and Zhong - 2010 - Do Green Products Make Us Better People.pdf,01,t,NA,79,=,2.55,=,0.013,0.012706213931749224,"t(79) = 2.55, p = .013",FALSE,FALSE,FALSE,0.45,t(79) = 2.55
+Taylor et al. - 2010 - Are Plasma Oxytocin in Women and Plasma Vasopressi.pdf,01,t,NA,81,=,0.482,=,0.631,0.6311057958394346,"t(81) = 0.482, p = .631",FALSE,FALSE,TRUE,0.4,t(81) = 0.482
+Taylor et al. - 2010 - Are Plasma Oxytocin in Women and Plasma Vasopressi.pdf,01,t,NA,83,=,-0.546,=,0.586,0.586530538,"t(83) = −0.546, p = .586",FALSE,FALSE,TRUE,0.4,t(83) = 0.546
+Bowles and Gelfand - 2010 - Status and the Evaluation of Workplace Deviance.pdf,01,t,NA,85,=,3.37,=,0.001,0.001132226,"t(85) = 3.37, p = .001",FALSE,FALSE,FALSE,0.88,t(85) = 3.37
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,9,=,4.411,<,0.01,0.001693134,"t(9) = 4.411, p < .01",FALSE,FALSE,FALSE,0.67,t(9) = 4.411
+Roberts and Humphreys - 2010 - The Role of Somatotopy and Body Posture in the Int.pdf,01,t,NA,9,=,1.247,=,0.244,0.24387181719862577,"t(9)= 1.247, p = .244",FALSE,FALSE,FALSE,0.67,t(9)= 1.247
+Alicke et al. - 2010 - Mere Categorization and the Frog-Pond Effect.pdf,01,t,NA,92,=,2.17,<,0.02,0.016291427972910867,"t(92) = 2.17, p < .02",FALSE,FALSE,TRUE,0.4,t(92) = 2.17
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,94,=,1.51,=,0.13,0.1343976687864866,"t(94) = 1.51, p = .13",FALSE,FALSE,TRUE,0.16,t(94) = 1.51
+Willems et al. - 2010 - Body-Specific Representations of Action Verbs Neu.pdf,01,t,NA,94,=,23.6,<,0.001,2.8008050326918203e-41,"t(94) = 23.60, p < .001",FALSE,FALSE,TRUE,0.16,t(94) = 23.60
+Liljenquist et al. - 2010 - The Smell of Virtue Clean Scents Promote Reciproc.pdf,01,t,NA,97,=,2.33,=,0.02,0.021878979870459406,"t(97) = 2.33, p = .02",FALSE,FALSE,FALSE,0.67,t(97) = 2.33
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,t,NA,99,=,2.3,<,0.05,0.023547473,"t(99) = 2.3, p < .05",FALSE,FALSE,FALSE,0.27,t(99) = 2.3
+Gardelle and Kouider - 2010 - How Spatial Frequencies and Visual Awareness Inter.pdf,01,t,NA,99,=,4.7,<,0.001,8.414721205120558e-6,"t(99) = 4.7, p < .001",FALSE,FALSE,FALSE,0.27,t(99) = 4.7
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,Z,NA,NA,=,-1,=,0.32,0.3173105078629141,"(z = –1.00, p = .32",FALSE,FALSE,FALSE,0.32,Z = 1.00
+Taylor et al. - 2010 - Are Plasma Oxytocin in Women and Plasma Vasopressi.pdf,01,Z,NA,NA,=,1.663,=,0.048,0.048156218,"z = 1.663, p = .048",FALSE,FALSE,TRUE,0.4,z = 1.663
+Taylor et al. - 2010 - Are Plasma Oxytocin in Women and Plasma Vasopressi.pdf,01,Z,NA,NA,=,1.898,=,0.029,0.028848041014040943,"z = 1.898, p = .029",FALSE,FALSE,TRUE,0.4,z = 1.898
+Senay et al. - 2010 - Motivating Goal-Directed Behavior Through Introspe.pdf,01,Z,NA,NA,=,2.03,=,0.043,0.042356539,"(z = 2.03, p = .043",FALSE,FALSE,FALSE,0.85,Z = 2.03
+Alario et al. - 2010 - The Functional Origin of the Foreign Accent Evide.pdf,01,Z,NA,NA,=,2.04,=,0.04,0.041350325732140106,"z = 2.04, p = .04",FALSE,FALSE,FALSE,1,z = 2.04
+Knoch et al. - 2010 - A Neural Marker of Costly Punishment Behavior.pdf,01,Z,NA,NA,=,2.24,<,0.03,0.025090923,"(Z = 2.24, p < .03",FALSE,FALSE,FALSE,0.6,Z = 2.24
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,Z,NA,NA,=,-2.78,=,0.005,0.00543589,"(z = –2.78, p = .005",FALSE,FALSE,FALSE,0.32,Z = 2.78
+Vasey and VanderLaan - 2010 - An Adaptive Cognitive Dissociation Between Willing.pdf,01,Z,NA,NA,=,-3.69,<,0.001,2.2425405196449416e-4,"(z = –3.69, p < .001",FALSE,FALSE,FALSE,0.32,Z = 3.69
+Fernbach et al. - 2010 - Neglect of Alternative Causes in Predictive but No.pdf,01,t,NA,58,<,0.08,>,0.9,0.9365126546683988,"t(58) < 0.08, p > .9",FALSE,FALSE,FALSE,0.82,
+Lee et al. - 2010 - Sneezing in Times of a Flu Pandemic Public Sneezi.pdf,01,t,NA,44,<,1,ns,NA,0.3227784787543093,"t(44) < 1, n.s.",FALSE,FALSE,FALSE,0.67,

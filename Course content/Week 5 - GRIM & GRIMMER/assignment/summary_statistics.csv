@@ -1,0 +1,4 @@
+doi,description,mean,sd,n,items,n_decimal_placed_mean,n_decimal_places_sd,notes
+https://doi.org/10.1037/a0030867,age,33.69,6.55,42,1,2,2,
+https://doi.org/10.1037/a0030867,BDI-II scores at follow up - control condition,24.41,2.83,42,1,2,2,
+https://doi.org/10.1037/a0030867,BDI-II scores at follow up - intervention  condition,6.82,4.37,42,1,2,2,

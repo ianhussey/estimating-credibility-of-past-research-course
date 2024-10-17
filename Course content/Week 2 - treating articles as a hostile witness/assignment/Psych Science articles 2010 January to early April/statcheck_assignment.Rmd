@@ -1,0 +1,117 @@
+---
+title: "Apply statcheck to assignments"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+
+# set knit options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+# Dependencies
+
+```{r}
+
+library(dplyr)
+library(statcheck)
+library(janitor)
+library(stringr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(readr)
+
+```
+
+# Summarize results
+
+```{r}
+
+dat <- read_csv("statcheck results assignments.csv") |>
+  janitor::clean_names() |>
+  fill(doi, .direction = "down") |>
+  fill(researcher, .direction = "down") |>
+  filter(statistic != "Statistic" & !is.na(statistic)) |>
+  mutate(correct = tolower(correct)) |>
+  mutate(correct = str_replace(correct, "✓", "yes"),
+         correct = str_replace(correct, "incorrect", "no"),
+         correct = str_replace(correct, "correct", "yes")) 
+
+
+dat |>
+  distinct(researcher, doi) |>
+  write_csv("researcher_and_doi_for_future_assignment_on_misinterpretations_of_p_values.csv")
+
+dat |> 
+  mutate(error = case_when(correct == "no" ~ "no",
+                           TRUE ~ "other")) |>
+  count(error, name = "n_tests") |>
+  mutate(percent = janitor::round_half_up(n_tests/sum(n_tests)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+dat |> 
+  group_by(doi) |>
+  summarize(any_error = any(correct == "no", na.rm = TRUE)) |>
+  ungroup() |>
+  count(any_error, name = "n_articles") |>
+  mutate(percent = janitor::round_half_up(n_articles/sum(n_articles)*100, 1)) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+
+
+# dat |> 
+#   filter(statistic != "no results are detected") |>
+#   mutate(error = case_when(correct == "no" ~ "no",
+#                            TRUE ~ "other")) |>
+#   count(error, name = "n_tests") |>
+#   mutate(percent = janitor::round_half_up(n_tests/sum(n_tests)*100, 1)) |>
+#   kable(align = "r") |>
+#   kable_classic(full_width = FALSE)
+# 
+# dat |> 
+#   filter(statistic != "no results are detected") |>
+#   group_by(doi) |>
+#   summarize(any_error = any(correct == "no", na.rm = TRUE)) |>
+#   ungroup() |>
+#   count(any_error, name = "n_articles") |>
+#   mutate(percent = janitor::round_half_up(n_articles/sum(n_articles)*100, 1)) |>
+#   kable(align = "r") |>
+#   kable_classic(full_width = FALSE)
+
+```
+
+Visual inspection of `dat` shows no decision errors.
+
+# Critique of this analysis
+
+What could go wrong here? Why might these results be wrong or incomplete?
+
+- Incomplete extractions. Results were extracted automatically. It could have made errors or missed the results of additional tests.
+- Failing to detect one-sided tests.
+
+# Session info
+
+```{r}
+
+sessionInfo()
+
+```
+
+
+
