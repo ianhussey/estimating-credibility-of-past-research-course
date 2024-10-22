@@ -1,0 +1,250 @@
+---
+title: "SPRITE"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r include=FALSE}
+
+# formatting options
+# set default chunk options
+knitr::opts_chunk$set(message = FALSE, 
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+```{r}
+
+library(tidyverse)
+library(janitor)
+library(rsprite2)
+library(knitr)
+library(kableExtra)
+library(scrutiny)
+library(purrr)
+
+```
+
+# SPRITE
+
+## Heathers' example
+
+- M = 2.20
+- SD = 2.53
+- N = 10
+
+```{r}
+
+# data adapted from heathers' example https://jamesheathers.medium.com/sprite-interlude-the-umbrella-graph-connecting-grim-and-sprite-also-brunch-sucks-1266c629c974
+
+sprite_results_1 <- 
+  set_parameters(mean = 2.20, 
+                 m_prec = 2, # number of decimal place M was reported to
+                 sd = 2.53, 
+                 sd_prec = 2, # number of decimal place SD was reported to
+                 n_obs = 10,
+                 min_val = 1, # lowest possible value of variable, if applicable. 
+                 max_val = 7) |> # highest possible value of variable, if applicable. 
+  find_possible_distributions(seed = 42, # set seed for random number generator for reproducibility
+                              n_distributions = 100)
+
+# plot_distributions(sprite_results_1) # not working for some reason
+
+sprite_data <- sprite_results_1 |>
+  unnest(distribution) |>
+  rename(solution = id, 
+         score = distribution) |>
+  select(solution, score)
+
+sprite_data
+
+ggplot(sprite_data, aes(score)) +
+  geom_histogram(center = 1, binwidth = 1) +
+  scale_x_continuous(breaks = scales::breaks_pretty(n = 7), limits = c(0.5, 7.5), name = "Score") +
+  scale_y_continuous(name = "Frequency") +
+  theme_linedraw() 
+  #facet_wrap(~ solution)
+
+```
+
+## Panhano-Fontes et al 2018
+
+Recalculated Control group, primary outcome measure (MADRS), followup time point (Day 7) 
+
+- M = 23.53
+- SD = 11.01
+- N = 15
+
+```{r}
+
+tides <- function(n_obs, mean, sd, min_val, max_val, sd_prec = NULL, n_items = 1) {
+  
+  if(is.null(sd_prec)){
+    sd_prec <- max(nchar(sub("^[0-9]*", "", mean)) - 1, 0)
+  }
+  
+  # Custom rounding functions
+  round_half_up <- function(x, digits = 0) {
+    posneg <- sign(x)
+    z <- abs(x) * 10^digits + 0.5
+    z <- trunc(z)
+    z <- z / 10^digits
+    z * posneg
+  }
+  
+  round_half_down <- function(x, digits = 0) {
+    posneg <- sign(x)
+    z <- abs(x) * 10^digits - 0.5
+    z <- trunc(z)
+    z <- z / 10^digits
+    z * posneg
+  }
+  
+  # Function to check mean equality with different rounding methods
+  mean_matches <- function(vec_mean, target_mean, sd_prec) {
+    rounded_means_vec <- c(round_half_up(vec_mean, sd_prec), round_half_down(vec_mean, sd_prec))
+    rounded_means_target <- c(round_half_up(target_mean, sd_prec), round_half_down(target_mean, sd_prec))
+    any(rounded_means_vec %in% rounded_means_target)
+  }
+  
+  result <- c(-Inf, Inf)
+  
+  aMin <- floor(mean * n_items) / n_items
+  aMax <- min_val
+  
+  bMin <- min(aMin + 1 / n_items, max_val)
+  bMax <- min(max(max_val, min_val + 1, aMin + 1), max_val)
+  
+  total <- round(mean * n_obs * n_items) / n_items
+  
+  poss_values <- seq(min_val, max_val, by = 1 / n_items)
+  
+  for(abm in list(c(aMin, bMin, 1), c(aMax, bMax, 2))){
+    
+    a <- abm[1]
+    b <- abm[2]
+    m <- abm[3]
+    
+    # Adjust a and b to be within min_val and max_val
+    a <- min(max(a, min_val), max_val)
+    b <- min(max(b, min_val), max_val)
+    
+    if(a == b){
+      vec <- rep(a, n_obs)
+    } else {
+      k <- round((total - (n_obs * b)) / (a - b))
+      k <- min(max(k, 1), n_obs - 1)
+      vec <- c(rep(a, k), rep(b, n_obs - k))
+      diff <- sum(vec) - total
+      
+      if ((diff < 0)) {
+        adjusted_value <- a + abs(diff)
+        if(!(adjusted_value %in% poss_values)){
+          next  # Skip to next iteration if adjusted value is invalid
+        }
+        vec <- c(rep(a, k - 1), adjusted_value, rep(b, n_obs - k))
+      } else if ((diff > 0)) {
+        adjusted_value <- b - diff
+        if(!(adjusted_value %in% poss_values)){
+          next  # Skip to next iteration if adjusted value is invalid
+        }
+        vec <- c(rep(a, k), adjusted_value, rep(b, n_obs - k - 1))
+      }
+    }
+    
+    # Check if the calculated mean and values match expected conditions
+    vec_mean <- mean(vec)
+    
+    if(mean_matches(vec_mean, mean, sd_prec) &
+       all(floor(vec * 1e9) %in% floor(poss_values * 1e9))){
+      result[m] <- round(sd(vec), sd_prec)
+    }
+    
+  }
+  
+  # Replace Inf or -Inf with NA
+  result[is.infinite(result)] <- NA
+  
+  # Create the data frame with the new columns
+  res <- 
+    tibble(sd_min = result[1],
+           sd_max = result[2]) |> 
+    mutate(tides_sd_range_calculable = !is.na(sd_min) & !is.na(sd_max),
+           tides_inside_ranges = ifelse(tides_sd_range_calculable,
+                                        mean >= min_val & mean <= max_val & sd >= sd_min & sd <= sd_max,
+                                        mean >= min_val & mean <= max_val),
+           tides = tides_sd_range_calculable & tides_inside_ranges) |>
+    # pomp scores 
+    mutate(pomp_m = (mean - min_val)/(max_val - min_val),
+           pomp_sd = ifelse(!is.na(sd_min) & !is.na(sd_max), (sd - sd_min)/(sd_max - sd_min), NA))
+  
+  return(res)
+}
+
+dat <- read_csv("palhano-fontes summary stats original and recalculated.csv")
+
+res <- dat |>
+  mutate(m_prec  = 2, # hard coded by rounding above for the moment
+         sd_prec = 2, # hard coded by rounding above for the moment
+         n_items = 1) |>
+  mutate(grim = pmap(list(as.character(m), n), grim)) |>
+  unnest(grim) |>
+  mutate(grimmer = pmap(list(as.character(m), as.character(sd), n), grimmer)) |>
+  unnest(grimmer) |>
+  mutate(tides = pmap(list(n, m, sd, min, max, sd_prec, n_items), possibly(tides, otherwise = NA))) |> 
+  unnest(tides) |>
+  # master variable
+  mutate(tides = ifelse(is.na(tides), TRUE, tides)) |>
+  mutate(all_three = ifelse(grim + grimmer + tides < 3, FALSE, TRUE))
+
+res |>
+  filter(Timepoint == "d7" & Measure == "MADRS")
+
+```
+
+```{r fig.height=12, fig.width=12}
+
+sprite_results_2 <-
+  set_parameters(mean = 23.53,
+                 m_prec = 2, # number of decimal place M was reported to
+                 sd = 11.01,
+                 sd_prec = 2, # number of decimal place SD was reported to
+                 n_obs = 15,
+                 min_val = 0, # lowest possible value of variable, if applicable.
+                 max_val = 60) |> # highest possible value of variable, if applicable.
+  find_possible_distributions(seed = 42, # set seed for random number generator for reproducibility
+                              n_distributions = 100)
+
+# plot_distributions(sprite_results_2) # not working for some reason
+
+#plot_distributions(sprite_results_2, plot_type = "histogram") 
+plot_distributions(sprite_results_2, plot_type = "ecdf") 
+
+```
+
+# Create native and POMP values
+
+
+```{r}
+
+tides(n_obs = 20, mean = 16.40, sd = 8.22, min_val = 0, max_val = 63, sd_prec = 2, n_items = 1)
+tides(n_obs = 20, mean = 12.30, sd = 7.11, min_val = 0, max_val = 60, sd_prec = 2, n_items = 1)
+tides(n_obs = 20, mean = , sd = 7.11, min_val = 0, max_val = 27, sd_prec = 2, n_items = 1)
+tides(n_obs = 20, mean =  4.30, sd = 1.90, min_val = 1, max_val =  7, sd_prec = 2, n_items = 4)
+
+```
+
+
+
+
+
