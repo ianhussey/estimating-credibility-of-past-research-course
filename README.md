@@ -31,6 +31,8 @@ Add guidance for how to apply the checklist
 
 ### Session 5
 
+GRIM/MER n_items refers to items averaged over, not total items!!!! this must be changed in slides and assignment instructions.
+
 Change instructions for assignment: scrutiny can't handle empty rows.
 
 Ask lukas for advice on how to get quoted text in the data to be checked, so it doesn't add decimal places.
