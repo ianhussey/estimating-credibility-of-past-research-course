@@ -1,0 +1,12 @@
+name: docc
+title: docc
+username: errors
+account: errors
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13231372
+bundleId: 9315134
+url: https://errors.shinyapps.io/docc/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
