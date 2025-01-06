@@ -1,0 +1,222 @@
+---
+title: "Extending Fried & Kievit's (2016) simulation critiquing Schmaal et al. (2016)"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: show
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+
+# set default chunk options
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+```{r}
+
+# dependencies
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(purrr)
+library(janitor)
+library(plotrix) # for std.error
+library(knitr)
+library(kableExtra)
+
+```
+
+# Visualising effect size reported in Schmaal
+
+Overall sample result in original publication: Cohen's d = .144, 95% CI [.064, .225]. N control = 7040, N MDD = 1700 (see Schmaal et al., 2016 table 1).
+
+```{r}
+
+ggplot(data = data.frame(x = c(-4, 4)), aes(x = x)) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0, sd = 1), 
+    color = "blue", 
+    size = 1
+  ) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0.144, sd = 1), 
+    color = "red", 
+    size = 1
+  ) +
+  labs(
+    title = "Point estimate (Cohen's d = .144)",
+    x = "Hippocampal volume (standardized)",
+    y = "Density"
+  ) +
+  theme_linedraw()
+
+ggplot(data = data.frame(x = c(-4, 4)), aes(x = x)) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0, sd = 1), 
+    color = "blue", 
+    size = 1
+  ) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0.064, sd = 1), 
+    color = "red", 
+    size = 1
+  ) +
+  labs(
+    title = "Lower bound CI (Cohen's d = .064)",
+    x = "Hippocampal volume (standardized)",
+    y = "Density"
+  ) +
+  theme_linedraw()
+
+ggplot(data = data.frame(x = c(-4, 4)), aes(x = x)) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0, sd = 1), 
+    color = "blue", 
+    size = 1
+  ) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0.225, sd = 1), 
+    color = "red", 
+    size = 1
+  ) +
+  labs(
+    title = "Lower bound CI (Cohen's d = .225)",
+    x = "Hippocampal volume (standardized)",
+    y = "Density"
+  ) +
+  theme_linedraw()
+
+```
+
+# Simulate classification accuracy implied by Schmaal's effect size
+
+Fried & Kievit (2016) reported a classification accuracy of 52.6% but using just a single simulated data set and no set seed (i.e. re-running their code produces different results). I therefore replicated their simulation and increased the number of iterations to average over to 1000.
+
+```{r}
+
+set.seed(42)
+
+generate_data <- function(n_control, 
+                          n_mdd,
+                          population_cohens_d) {
+  
+  require(dplyr)
+  require(tibble)
+  
+  data <- 
+    bind_rows(
+      tibble(condition = "control",
+             hippocampal_volume = rnorm(n = n_control, mean = 0, sd = 1)),
+      tibble(condition = "mdd",
+             hippocampal_volume = rnorm(n = n_mdd, mean = population_cohens_d, sd = 1))
+    ) |>
+    mutate(condition_numeric = case_when(condition == "control" ~ 1,
+                                         condition == "mdd" ~ 2))
+  
+  return(data)
+}
+
+analyse <- function(data) {
+  
+  require(yardstick)
+  require(mclust)
+  
+  fit <- mclust::Mclust(data = data$hippocampal_volume, 
+                        G = 2, # two clusters
+                        verbose = FALSE) 
+  
+  classifications <- tibble(truth = factor(data$condition_numeric),
+                            estimate = factor(fit$classification))
+  
+  res <- yardstick::accuracy(classifications, 
+                             truth = truth, 
+                             estimate = estimate) |>
+    select(accuracy = .estimate)
+  
+  return(res)
+}
+
+simulation <- 
+  # "using the experiment parameters..."
+  expand_grid(n_control = 7040,
+              n_mdd = 1700,
+              population_cohens_d = c(.144, .064, .225), 
+              iteration = 1:1000) |>
+  
+  # ...generate data that meets those parameters...
+  mutate(data = pmap(list(n_control, 
+                          n_mdd,
+                          population_cohens_d),
+                     generate_data)) |>
+  
+  # "... then apply the analysis function to the generated data using the parameters relevant to analysis"
+  mutate(results = pmap(list(data), 
+                        analyse))
+
+# summarize across iterations
+simulation_results <- simulation |>
+  unnest(results) |>
+  group_by(n_control,
+           n_mdd,
+           population_cohens_d) |>
+  summarize(classification_accuracy_mean = mean(accuracy),
+            classification_accuracy_se = std.error(accuracy),
+            .groups = "drop") |>
+  select(n_control, n_mdd, population_cohens_d,
+         classification_accuracy_mean,
+         classification_accuracy_se) 
+
+# print table
+simulation_results |>
+  mutate_if(is.numeric, round_half_up, digits = 3) |>
+  kable(align = "r") |>
+  kable_classic(full_width = FALSE)
+
+
+res_string <- paste0(
+  "Classification accuracy = ", simulation_results$classification_accuracy_mean[2] |> round_half_up(3), 
+  ", 95% CI [", simulation_results$classification_accuracy_mean[1] |> round_half_up(3), 
+  ", ", simulation_results$classification_accuracy_mean[3] |> round_half_up(3), "]"
+)
+
+# res_string
+
+```
+
+Results of this simulation, simulating classification accuracy for Schmall et al.'s (2015) point estimate of Cohen's d but also their CIs: `r res_string`
+
+Note that [Bartoš et al. (2023)](https://arxiv.org/abs/2310.04153), after flipped coins 350,757 times and found that the probability of a flipped coin landing on the same side has a slight bias: 50.8%. The probability of being able to predict whether a given person has MDD is therefore not merely akin to tossing a coin, it is statistically comparable to it, given the bias of tossed coins.
+
+Cost of just the MRI scans for this study can be roughly estimated at `r 8159 * 1000` CHF.
+
+Citations in 2024/11: 
+
+- Schmaal et al. (2016): 1162
+- Fried & Kievit (2016): 31
+
+# Session info
+
+```{r}
+
+sessionInfo()
+
+```
+
+

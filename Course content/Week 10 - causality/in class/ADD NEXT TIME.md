@@ -1,0 +1,1 @@
+mockett et al. 2024 is a good illustration of most studies making causal implications while also cautioning against doing it. julia summarised their results too, showing that the majority (84%?) report mediation analyses which have explicitly causal assumptions, but almost all use observational cross sectional data too so can't substantiate them.

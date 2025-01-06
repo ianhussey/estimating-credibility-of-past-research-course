@@ -1,0 +1,344 @@
+---
+title: "Reanalysis of Gloster et al. (2011)" 
+subtitle: "Recalculate Standardized Mean Difference effect sizes from summary statistics (M, SD, and N)"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+# TODO
+
+- notionally, could add NNT and cost calculations to the cohen's d calculations too. This would likely show it is less effective again, and reinforce the argument that discussion of the results of Gloster et al. (2011) have been heavily cherry picked.
+
+```{r include=FALSE}
+
+# formatting options
+# set default chunk options
+knitr::opts_chunk$set(message = FALSE, 
+                      warning = FALSE)
+
+# disable scientific notation
+options(scipen = 999) 
+
+```
+
+```{r}
+
+library(tidyverse)
+library(metafor)
+library(janitor)
+library(knitr)
+library(kableExtra)
+library(readxl)
+
+independent_ttest_from_summary_stats <- function(n1, m1, sd1, n2, m2, sd2, sig_level = 0.05){
+  
+  # Calculate the t-test statistic
+  t_value <- (m1 - m2) / sqrt((sd1^2/n1) + (sd2^2/n2))
+  
+  # Calculate the degrees of freedom using the approximation
+  df <- ((sd1^2/n1 + sd2^2/n2)^2) / ((sd1^2/n1)^2/(n1-1) + (sd2^2/n2)^2/(n2-1))
+  
+  # Obtain p-value for two-tailed test
+  p_value <- 2 * (1 - pt(abs(t_value), df))
+  
+  # Calculate Cohen's d
+  pooled_sd <- sqrt(((n1-1)*sd1^2 + (n2-1)*sd2^2) / (n1 + n2 - 2))
+  d <- (m1 - m2) / pooled_sd
+  
+  # Calculate the standard error of d
+  se_d <- sqrt(((n1 + n2) / (n1 * n2)) + (d^2 / (2 * (n1 + n2))))
+  
+  # Calculate the t critical value for 95% CI
+  t_critical <- qt(1 - (sig_level/2), df = n1 + n2 - 2)
+  
+  # Calculate the 95% CI for Cohen's d
+  d_ci_lower <- d - t_critical * se_d
+  d_ci_upper <- d + t_critical * se_d
+  
+  res <- 
+    data.frame(t = t_value,
+               df = df,
+               p = p_value,
+               cohens_d = d,
+               cohens_d_ci_lower =  d_ci_lower,
+               cohens_d_ci_upper =  d_ci_upper)
+  
+  return(res)
+}
+
+round_half_up_min_decimals <- function(x, digits = 2) {
+  sprintf(paste0("%.", digits, "f"), janitor::round_half_up(x, digits = digits))
+}
+
+# data
+dat <- read_excel("data.xlsx", sheet = "data for r") |>
+  mutate(timepoint_metric = fct_relevel(timepoint_metric, "BL", "Post", "FU6 using baseline for WL", "FU6 using post for WL"))
+
+summary_statistics_for_effect_sizes <- dat |>
+  filter(!timepoint_metric %in% c("Res. rate (%): post", "Res. rate (%): FU6")) |>
+  rename(timepoint = timepoint_metric)
+
+summary_statistics_for_percents <- dat |>
+  filter(timepoint_metric %in% c("Res. rate (%): post", "Res. rate (%): FU6")) |>
+  filter(outcome == "Panic attacks") |>
+  rename(timepoint = timepoint_metric) |>
+  mutate(timepoint = str_remove(string = timepoint, pattern = "Res\\. rate \\(%\\): ")) |>
+  select(outcome, 
+         timepoint, 
+         n_t_plus, 
+         percent_response_rate_t_plus = m_t_plus, 
+         n_t_minus, 
+         percent_response_rate_t_minus = m_t_minus, 
+         n_wl, 
+         percent_response_rate_wl = m_wl)
+
+```
+
+# Response rates
+
+These results are what are emphasized by Gloster in keynote talks: "two thirds of patients get better with therapy".
+
+Where does this two thirds number come from? Presumably the panic attacks response rate at 6 week follow up in the t_plus intervention (which includes real world exposure sessions). However, this number isn't reported in Gloster et al. (2011, Table 2), although it can be found by adding the panic attack response rate at post and the change in response rate between post and follow up (FU6) for the t_plus intervention. This took some work to find, but it is the only way I can find "66%" across the outcome variables, time points, and intervention conditions reported in Gloster et al. (2011).
+
+```{r}
+
+summary_statistics_for_percents |>
+  select(outcome, timepoint, percent_response_rate_t_plus, percent_response_rate_t_minus, percent_response_rate_wl) |>
+  knitr::kable() |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+Note that the response rate can be converted to the Number Needed to Treat to see response in one patient (NNT = 1/response rate*100).
+
+```{r}
+
+summary_statistics_for_percents |>
+  mutate(naive_nnt_t_plus = 1/percent_response_rate_t_plus*100, 
+         naive_nnt_t_minus = 1/percent_response_rate_t_minus*100, 
+         naive_nnt_wl = 1/percent_response_rate_wl*100) |>
+  select(outcome, timepoint, naive_nnt_t_plus, naive_nnt_t_minus, naive_nnt_wl) |>
+  mutate_if(is.numeric, round_half_up_min_decimals, digits = 1) |>
+  knitr::kable() |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+Once we have the NNT, we can calculate the cost per panic attack free patient.
+
+- 190 USD/hour (160 CHF/hour)
+- 14 sessions
+- 2660 USD per patient in 2024
+- NNT from above table (naive/nominal, ie it's incorrect but its the value quoted in talks)
+- Nominally 3990 USD (t_plus) to make one person panic attack free at 6 weeks post therapy using the t_plus intervention.
+
+However, this "response rate" is incorrectly interpreted in Gloster's keynote talk. An RCT like this calculates the efficacy of treatment in terms of the difference between the intervention and the control condition. Put another way, it is misleading to say "two thirds of patients get better with therapy" without also adding "and just over one third of patients get better if you do nothing". The efficacy of the treatment is the difference between these. Note however that Gloster et al. (2011) do not report the change between post and follow up for the control group, so the response rate at FU6 cannot be directly calculated from their results. However, we can approximate this value by assuming a change of 0 between post and follow up, which is not completely unreasonable (albeit approximate) for the waiting list control group. The pattern of change among the other summary statistics (i.e., means for different outcomes) are near zero, making this assumption more plausible. Is this ideal? No, but given that no data was collected for this group at this time point is the best approximation available, and improves on the analyses reported by Gloster et al. (2011) that don't address this question of the average treatment effect directly. I.e., this is a flaw in the design of Gloster et al. (2011) rather than in this analysis. I calculate this average response rate (difference between treatment and control), its 95% Confidence Intervals, and its corresponding NNT.
+
+```{r}
+
+calc_percent_efficacy <- function(percent1, percent2, n1, n2, conf_level = 0.95) {
+  # calculate the difference in proportions
+  diff_prop <- percent1 - percent2
+  
+  # calculate the standard error (SE)
+  SE <- sqrt(abs((percent1 * (1 - percent1) / n1) + (percent2 * (1 - percent2) / n2)))
+  
+  # Z value for the desired confidence level (e.g., 1.96 for 95% confidence)
+  z_value <- qnorm((1 + conf_level) / 2)
+  
+  # calculate the confidence interval
+  ci_lower <- diff_prop - (z_value * SE)
+  ci_upper <- diff_prop + (z_value * SE)
+  
+  res <-  tibble(percent_efficacy = as.numeric(diff_prop),
+                 ci_lower = ci_lower,
+                 ci_upper = ci_upper) 
+  
+  return(res)
+}
+
+results <- 
+  bind_rows(
+    calc_percent_efficacy(percent1 = summary_statistics_for_percents$percent_response_rate_t_plus[1], 
+                          percent2 = summary_statistics_for_percents$percent_response_rate_wl[1], 
+                          n1 = summary_statistics_for_percents$n_t_plus[1], 
+                          n2 = summary_statistics_for_percents$n_wl[1]) |>
+      mutate(comparison = "t_plus vs wl", 
+             timepoint = "post"),
+    
+    calc_percent_efficacy(percent1 = summary_statistics_for_percents$percent_response_rate_t_plus[2], 
+                          percent2 = summary_statistics_for_percents$percent_response_rate_wl[2], 
+                          n1 = summary_statistics_for_percents$n_t_plus[2], 
+                          n2 = summary_statistics_for_percents$n_wl[2]) |>
+      mutate(comparison = "t_plus vs wl", 
+             timepoint = "FU6"),
+    
+    calc_percent_efficacy(percent1 = summary_statistics_for_percents$percent_response_rate_t_minus[1], 
+                          percent2 = summary_statistics_for_percents$percent_response_rate_wl[1], 
+                          n1 = summary_statistics_for_percents$n_t_minus[1], 
+                          n2 = summary_statistics_for_percents$n_wl[1]) |>
+      mutate(comparison = "t_minus vs wl", 
+             timepoint = "post"),
+    
+    calc_percent_efficacy(percent1 = summary_statistics_for_percents$percent_response_rate_t_minus[2], 
+                          percent2 = summary_statistics_for_percents$percent_response_rate_wl[2], 
+                          n1 = summary_statistics_for_percents$n_t_minus[2], 
+                          n2 = summary_statistics_for_percents$n_wl[2]) |>
+      mutate(comparison = "t_minus vs wl", 
+             timepoint = "FU6")
+  ) |>
+  mutate(nnt = 1/percent_efficacy*100,
+         nnt_ci_lower = 1/ci_upper*100,
+         nnt_ci_upper = 1/ci_lower*100) |>
+  mutate_if(is.numeric, round_half_up_min_decimals, digits = 1) |>
+  select(timepoint, comparison, 
+         percent_efficacy, percent_efficacy_ci_lower = ci_lower, percent_efficacy_ci_upper = ci_upper,
+         nnt, nnt_ci_lower, nnt_ci_upper) |>
+  arrange(desc(timepoint), desc(comparison))
+
+results |>
+  knitr::kable() |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+The correct interpretation is more like "one third of patients get better with therapy compared to not getting therapy" - half of that claimed in Gloster's keynote.
+
+We can then calculate the cost per panic attack free patient from the NNT.
+
+- 190 USD/hour (160 CHF/hour)
+- 14 sessions
+- 2660 USD per patient in 2024
+- NNT from above table
+- 9044 USD (95% CI [6118, 16492]) to make one person panic attack free at 6 weeks post therapy using the t_plus intervention, 226% (95% CI [153, 413]) as expensive as implied by Gloster's results in his keynote.
+
+# t-tests and Cohen's *d*s
+
+Given that response rate throws away the data's granularity by dichotomising each participant as panic attack free or not, it might be more useful to consider the average number of panic attack per patients instead of the number of panic attack free patients.
+
+Unfortunately no results were reported for FU6 for the waiting list condition. Given that we can reasonably assume little change between time points, we could use the numbers reported for the baseline or post time points for the WL condition. I calculate using both for the sake of comparison. 
+
+The point of these recalculations is that Gloster et al. (2011) make the same mistake as Gloster does in his keynote: they fail to make the key comparison between the intervention and control groups at follow up. All other estimates are secondary to this when we want to know "is this intervention better than control in a lasting way", i.e., the average treatment effect. So, let's calculate this.
+
+## T+ vs. waiting list
+
+```{r}
+
+summary_stats_t_plus <- summary_statistics_for_effect_sizes |>
+  rename(n1 = n_t_plus, 
+         m1 = m_t_plus, 
+         sd1 = sd_t_plus, 
+         n2 = n_wl, 
+         m2 = m_wl,
+         sd2 = sd_wl)
+
+results_t_plus <- summary_stats_t_plus |>
+  mutate(ttest_results = pmap(list(n1, m1, sd1, n2, m2, sd2, 0.05),
+                              independent_ttest_from_summary_stats)) |>
+  unnest(ttest_results) |>
+  mutate(sig = ifelse(p < .05, "*", "")) |>
+  select(outcome, timepoint, m_t_plus = m1, sd_t_plus = sd1, m_wl = m2,  sd_wl = sd2, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  mutate(p = round_half_up_min_decimals(p, digits = 3),
+         p = ifelse(p < .001, "<.001", as.character(p))) |>
+  mutate_if(is.numeric, round_half_up_min_decimals, digits = 2) |>
+  arrange(timepoint) 
+
+results_t_plus |>
+  #filter(outcome == "Panic attacks") |>
+  filter(str_detect(timepoint, "FU6")) |>
+  select(outcome, timepoint, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  arrange(outcome, timepoint) |>
+  knitr::kable(align = 'r') |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+Note that these recalculated values suggest:
+
+- At follow up (FU6), differences between the intervention (t_plus) and control conditions were generally not robustly statistically significant (i.e., between using the baseline vs. post values for the WL group). Average number of panic attacks did not significantly decrease under either set of values, nor did anxiety. CGI, MI-Alone, and PAS only improved significantly when using baseline values for WL but not post values.
+- With a large number of outcomes, and some being scored multiple ways (e.g., mean score vs. percent of patients showing a response, and how that response criterion was defined), and in the absence of a clinical trial registration, it is difficult to know what the primary outcome was a priori, and how it was planned to be scored a priori. The abstract paints a very rosy picture of the results, but this reanalysis of the average treatment effect (i.e., between intervention and control at the follow up time point) suggests far more null results, and a null effect for number of panic attacks. If the effect doesn't last a few weeks after therapy, is it worth the cost?
+- **Add note on the relative plausibility of each set of numbers. The post time point will be less susceptible to regression to the mean after selection effects than the baseline values?**
+
+## T- vs. waiting list
+
+```{r}
+
+summary_stats_t_minus <- summary_statistics_for_effect_sizes |>
+  rename(n1 = n_t_minus, 
+         m1 = m_t_minus, 
+         sd1 = sd_t_minus, 
+         n2 = n_wl, 
+         m2 = m_wl,
+         sd2 = sd_wl)
+
+results_t_minus <- summary_stats_t_minus |>
+  mutate(ttest_results = pmap(list(n1, m1, sd1, n2, m2, sd2, 0.05),
+                              independent_ttest_from_summary_stats)) |>
+  unnest(ttest_results) |>
+  mutate(sig = ifelse(p < .05, "*", "")) |>
+  select(outcome, timepoint, m_t_minus = m1, sd_t_minus = sd1, m_wl = m2,  sd_wl = sd2, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  mutate(p = round_half_up_min_decimals(p, digits = 3),
+         p = ifelse(p < .001, "<.001", as.character(p))) |>
+  mutate_if(is.numeric, round_half_up_min_decimals, digits = 2) |>
+  arrange(timepoint) 
+
+results_t_minus |>
+  #filter(outcome == "Panic attacks") |>
+  filter(str_detect(timepoint, "FU6")) |>
+  select(outcome, timepoint, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  arrange(outcome, timepoint) |>
+  knitr::kable(align = 'r') |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+- At follow up (FU6), differences between the intervention (t_minus) and control conditions were generally not robustly statistically significant (i.e., between using the baseline vs. post values for the WL group). Average number of panic attacks did not significantly decrease under either set of values, nor did anxiety. CGI, and PAS only improved significantly when using baseline values for WL but not post values. MI-Alone decreased under both set of values.
+- **Add note on the relative plausibility of each set of numbers. The post time point will be less susceptible to regression to the mean after selection effects than the baseline values?**
+
+## T+ vs. T-
+
+```{r}
+
+summary_stats_t_plus_t_minus <- summary_statistics_for_effect_sizes |>
+  rename(n1 = n_t_plus, 
+         m1 = m_t_plus, 
+         sd1 = sd_t_plus, 
+         n2 = n_t_minus, 
+         m2 = m_t_minus,
+         sd2 = sd_t_minus)
+
+results_stats_t_plus_t_minus <- summary_stats_t_plus_t_minus |>
+  filter(str_detect(timepoint, "FU6 using baseline for WL")) |>
+  mutate(timepoint = str_remove(timepoint, " using baseline for WL")) |>
+  mutate(ttest_results = pmap(list(n1, m1, sd1, n2, m2, sd2, 0.05),
+                              independent_ttest_from_summary_stats)) |>
+  unnest(ttest_results) |>
+  mutate(sig = ifelse(p < .05, "*", "")) |>
+  select(outcome, timepoint, m_t_minus = m1, sd_t_minus = sd1, m_wl = m2,  sd_wl = sd2, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  mutate(p = round_half_up_min_decimals(p, digits = 3),
+         p = ifelse(p < .001, "<.001", as.character(p))) |>
+  mutate_if(is.numeric, round_half_up_min_decimals, digits = 2) |>
+  arrange(timepoint) 
+
+results_stats_t_plus_t_minus |>
+  #filter(outcome == "Panic attacks") |>
+  select(outcome, timepoint, cohens_d, cohens_d_ci_lower, cohens_d_ci_upper, p, sig) |>
+  arrange(outcome, timepoint) |>  
+  knitr::kable(align = 'r') |>
+  kableExtra::kable_classic(full_width = FALSE)
+
+```
+
+The abstract states "“Therapist-guided exposure is more effective for agoraphobic avoidance, overall functioning, and panic attacks in the follow-up period than is CBT without therapist-guided exposure.” (Gloster et al., 2011, p. 406). However, this reanalysis suggests the average treatment effects for the various outcome variables at follow up are all null results (although the response rate/no panic attacks does seem to be effective). Nonetheless, this is a far more negative picture that conveyed by the abstract.
+
+Note that this reanalysis wasn't even necessary to demonstrating this - Gloster et al. (2011, table 2) also reports all null results for this difference between the two intervention conditions at the FU6 time point.
+
+
+

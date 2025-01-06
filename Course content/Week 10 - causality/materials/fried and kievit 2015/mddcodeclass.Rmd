@@ -1,0 +1,141 @@
+```{r}
+
+# This R-code is part of:
+# Fried & Kievit: "The volumes of subcortial regions of depressed and healthy individuals are strikingly similar: A reinterpretation of the results by Schmaal et al. 2015"
+# This code loads and simulates data to reproduce the sample- and effect sizes reported in Schmaal et al., computes univariate classifier accuracy, and plots the classification accuracy.
+# Written September 2015
+
+
+# This code depends especially on the following packages we were unable to cite in the commentary due to reference restrictions
+# - Fraley, C., & Raftery, A. E. (1999). MCLUST: Software for model-based cluster analysis. Journal of Classification, 16(2), 297-306.
+# - Sing, T., Sander, O., Beerenwinkel, N., & Lengauer, T. (2005). ROCR: visualizing classifier performance in R. Bioinformatics, 21(20), 3940-3941.
+
+
+# ### Install and load relevant packages
+# install.packages('ggplot2')
+# install.packages('mclust')
+# install.packages('ROCR')
+library(ggplot2)
+library(mclust)
+library(ROCR)
+
+### Load cohens_d function used to compute effect size
+cohens_d <- function(x, y) {
+  lx <- length(x)- 1
+  ly <- length(y)- 1
+  md  <- abs(mean(x) - mean(y))        # mean difference (numerator)
+  csd <- lx * var(x) + ly * var(y)
+  csd <- csd/(lx + ly)
+  csd <- sqrt(csd)                     # common sd computation
+  
+  cd  <- md/csd                        # Cohen's d
+}
+
+### Load simulated data (direct download from figshare)
+depdat=read.table('depdat.csv',sep=',',header=T) # loading simulated data with effect size of (see end for simulation code)
+controls=depdat[1:7040,] # define groups for ES function
+mdd=depdat[7041:8159,]  # define groups for ES function
+test=cohens_d(controls$Hcvolume,mdd$Hcvolume)
+test #Cohen's d of 0.1701105
+
+depdat |>
+  count(group)
+
+```
+
+
+```{r}
+
+library(readr)
+library(effsize)
+
+depdat <- read_csv('depdat.csv') 
+
+cohen.d(Hcvolume ~ group, data = depdat)
+
+```
+
+
+```{r}
+
+set.seed(42)
+
+### Compute classification accuracy using packages Mclust and ROCR
+true=depdat$labels #ground truth (in simulated data)
+
+### Prediction
+clustpred=Mclust(depdat$Hcvolume,2) # run clustering algorithm, ask for 2 classes
+predictionres=prediction(true,clustpred$classification) #create prediction object to compute performance
+accuracy=performance(predictionres,measure='acc') #compute performance of classifier. Here we choose accuracy, but a wide range of other metrics can be computed, see ?performance for more options
+accuracyrate=max(unlist(accuracy@y.values)) #extract accuracy rate: 52.6%
+accuracyrate
+
+```
+
+
+
+```{r}
+
+# Load the package
+library(yardstick)
+library(dplyr)
+
+depdat_binary <- depdat |>
+  mutate(group = case_when(group == "controls" ~ 0,
+                           group == "MDD" ~ 1),
+         group = as.factor(group))
+
+# Fit logistic regression model
+model <- glm(group ~ Hcvolume, 
+             data = depdat_binary, 
+             family = binomial)
+
+summary(model)
+
+# Generate predictions
+predictions <- depdat_binary %>%
+  mutate(predicted_prob = predict(model, type = "response"),
+         predicted_class = factor(ifelse(predicted_prob > 0.5, 1, 0)))
+
+# Calculate accuracy using yardstick
+accuracy_result <- yardstick::accuracy(predictions, 
+                                       truth = group, 
+                                       estimate = predicted_class)
+
+print(accuracy_result)
+
+predictions |>
+  count(group, predicted_class)
+
+```
+
+```{r}
+
+### Create histogram and density plot
+ggplot(depdat,aes(x=Hcvolume, fill=group)) + 
+  geom_density(alpha = 0.9, adjust = 1) + 
+  theme(text = element_text(size=15)) +
+  xlab('Hippocampal volume')
+
+#ggsave('groupdiffdens.pdf',height=5,width=5)
+
+ggplot(depdat,aes(x=Hcvolume)) + 
+  geom_histogram(data=subset(depdat,group == 'controls'),fill = "#F8766D", binwidth = 70) + 
+  geom_histogram(data=subset(depdat,group == 'MDD'),fill = "#00BFC4", binwidth = 70) +
+  theme(text = element_text(size=15))
+
+#ggsave('groupdiffhist.pdf',height=5,width=5)
+
+
+# The following code simulates data with the same population parameters (but obviously actual effect size may vary). May be relevant to compute range of classifier accuracies.
+# d=.17
+# samplesizecont=7040
+# samplesizeopat=1119
+# controls=rnorm(samplesizecont,2400,400)
+# mdd=rnorm(samplesizeopat,(2400-d*400),400)
+# vals=as.numeric(c(controls,mdd))
+# condname=as.factor(c(rep('controls',times=samplesizecont),rep('MDD',times=samplesizeopat)))
+# depdat=data.frame(vals,condname)
+# colnames(depdat)=c('value','group')
+
+```
