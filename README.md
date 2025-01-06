@@ -33,6 +33,13 @@ Add guidance for how to apply the checklist
 
 GRIM/MER n_items refers to items averaged over, not total items!!!! this must be changed in slides and assignment instructions.
 
+Give more instruction on what summary stats are suitable for GRIMMER and TIDES - they have to be granular, can also be bounded. 
+
 Change instructions for assignment: scrutiny can't handle empty rows.
 
 Ask lukas for advice on how to get quoted text in the data to be checked, so it doesn't add decimal places.
+
+### sessions grim and tides
+
+Add a flow chart for what each tests and assumes, what it doesnt test or what can't be explained. eg grim only tells you the summary stats didnt come from a dataset. if it did, it could still come from a fabricated dataset.
+
